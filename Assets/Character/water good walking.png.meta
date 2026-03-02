@@ -1,10 +1,31 @@
 fileFormatVersion: 2
-guid: d858dd41f871361408b5a168ba2f758b
+guid: fd14f5d878a41454fb3cecdbca0883fe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8772728055747360272
-    second: VillageFloorBefore_0
+      213: -7969203502533401455
+    second: water good walking_0
+  - first:
+      213: 7136698270077748571
+    second: water good walking_1
+  - first:
+      213: 5305435196568556169
+    second: water good walking_2
+  - first:
+      213: -1597581079561777783
+    second: water good walking_3
+  - first:
+      213: -6528958440493275221
+    second: water good walking_4
+  - first:
+      213: 6085873596397149737
+    second: water good walking_5
+  - first:
+      213: 7019023827207128360
+    second: water good walking_6
+  - first:
+      213: 7819579846620552300
+    second: water good walking_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +134,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: VillageFloorBefore_0
+      name: water good walking_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 016bce1dfadfeb970800000000000000
-      internalID: 8772728055747360272
+      spriteID: 194a2b813a3b76190800000000000000
+      internalID: -7969203502533401455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water good walking_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b550129c345aa0360800000000000000
+      internalID: 7136698270077748571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water good walking_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 982d25ea331b0a940800000000000000
+      internalID: 5305435196568556169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water good walking_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98dc5d4f87044d9e0800000000000000
+      internalID: -1597581079561777783
       vertices: []
       indices: 
       edges: []
@@ -138,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0ba3e0e9dbd7b714f897194554c39f91
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +235,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      VillageFloorBefore_0: 8772728055747360272
+      water good walking_0: -7969203502533401455
+      water good walking_1: 7136698270077748571
+      water good walking_2: 5305435196568556169
+      water good walking_3: -1597581079561777783
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

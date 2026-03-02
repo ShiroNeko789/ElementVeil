@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d858dd41f871361408b5a168ba2f758b
+guid: 8a624151010d17143a983e991aeab6dd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8772728055747360272
-    second: VillageFloorBefore_0
+      213: -5330276393451670942
+    second: LeafHouse3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: VillageFloorBefore_0
+      name: LeafHouse3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 54
+        x: 11
+        y: 11
+        width: 89
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 016bce1dfadfeb970800000000000000
-      internalID: 8772728055747360272
+      spriteID: 262b9a57cdd0706b0800000000000000
+      internalID: -5330276393451670942
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      VillageFloorBefore_0: 8772728055747360272
+      LeafHouse3_0: -5330276393451670942
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
