@@ -770,7 +770,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 0}
+    TrackingTarget: {fileID: 931592321}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -802,7 +802,7 @@ Transform:
   m_GameObject: {fileID: 219492117}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.52, y: -1.87, z: -10}
+  m_LocalPosition: {x: -6.8, y: -1.93, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1872,17 +1872,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.08306098, y: -1.1664084}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 3.2, y: 3.2}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 0.5592656, y: 0.39957094}
   m_EdgeRadius: 0
 --- !u!70 &931592318
 CapsuleCollider2D:
@@ -1918,8 +1918,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.043412026, y: -0.06397545}
-  m_Size: {x: 0.5168609, y: 1.0149571}
+  m_Offset: {x: -0.13824797, y: -0.09017563}
+  m_Size: {x: 1.2469358, y: 2.168272}
   m_Direction: 0
 --- !u!50 &931592319
 Rigidbody2D:
@@ -1947,7 +1947,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &931592320
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2013,7 +2013,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.8, y: -1.93, z: 0}
-  m_LocalScale: {x: 3.5721, y: 3.5721, z: 3.5721}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
