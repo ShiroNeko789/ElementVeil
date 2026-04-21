@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0b468ece059042040b0483f91f7da869
+guid: fe33cd6803c0c50409243a54a4a0b920
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1258130109829940492
-    second: stage1 floor 1_0
+      213: -1756461892321658416
+    second: sea floor_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: stage1 floor 1_0
+      name: sea floor_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 256
-        height: 59
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4fafc5ab4593a8ee0800000000000000
-      internalID: -1258130109829940492
+      spriteID: 0d938ae073bcf97e0800000000000000
+      internalID: -1756461892321658416
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      stage1 floor 1_0: -1258130109829940492
+      sea floor_0: -1756461892321658416
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
