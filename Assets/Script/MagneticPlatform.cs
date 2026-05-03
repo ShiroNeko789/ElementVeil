@@ -2,43 +2,32 @@ using UnityEngine;
 
 public class MagneticPlatform : MonoBehaviour
 {
-    public bool isNorthItem = true; // Red = North, Blue = South
+    public bool isNorthItem = true;
     public float moveSpeed = 5f;
 
     private Rigidbody2D rb;
     private PlayerMagnet playerScript;
-    private bool isSelected = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        // Automatically find the player
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMagnet>();
 
-        // Ensure Y position never changes even if something heavy lands on it
+        // Physics Setup: Kinematic is best for moving platforms
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        rb.useFullKinematicContacts = true;
         rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
     }
 
-    private void OnMouseDown()
-    {
-        if (playerScript != null && playerScript.magnetModeActive)
-        {
-            playerScript.SelectNewTarget(this.GetComponent<MagneticItem>());
-            isSelected = true;
-        }
-    }
+    // NO parenting code here! This prevents the "small player" bug.
 
-    // This handles the specialized sliding logic
     public void Slide(Vector2 playerPos, bool playerIsNorth)
     {
-        // Calculate direction only on the X axis
         float directionX = playerPos.x - transform.position.x;
-
-        // Opposites Attract (Pull), Likes Repel (Push)
         float forceDir = (playerIsNorth == isNorthItem) ? -1f : 1f;
-
-        // Apply velocity only to X, keep Y at 0
         float finalMove = Mathf.Sign(directionX) * moveSpeed * forceDir;
+
+        // Move the platform using velocity
         rb.linearVelocity = new Vector2(finalMove, 0);
     }
 

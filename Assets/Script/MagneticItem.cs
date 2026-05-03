@@ -12,9 +12,9 @@ public class MagneticItem : MonoBehaviour
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMagnet>();
     }
 
-    // THIS IS THE MOBILE TAP
     private void OnMouseDown()
     {
+        Debug.Log("CLICK DETECTED ON: " + gameObject.name); // ADD THIS
         if (playerScript != null && playerScript.magnetModeActive)
         {
             playerScript.SelectNewTarget(this);
@@ -37,4 +37,22 @@ public class MagneticItem : MonoBehaviour
     }
 
     public void StopMoving() => rb.linearVelocity = Vector2.zero;
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
+
+            if (hit.collider != null)
+            {
+                Debug.Log("MANUAL RAYCAST HIT: " + hit.collider.name);
+            }
+            else
+            {
+                Debug.Log("RAYCAST HIT NOTHING AT: " + mousePos);
+            }
+        }
+    }
 }
