@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 848272930997166086}
   - component: {fileID: 4704908934425924508}
   m_Layer: 0
-  m_Name: WaterBullet_2
-  m_TagString: Untagged
+  m_Name: WaterBullet
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,8 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913aa7119ad85b84da3be2eef2b768d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  lifeTime: 2
+  speed: 10
+  lifeTime: 3
   damage: 1
   rustPower: 20
 --- !u!58 &848272930997166086
@@ -136,7 +136,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

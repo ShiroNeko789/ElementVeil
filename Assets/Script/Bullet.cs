@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // 1. Check for Enemies (Existing logic)
+        // 1. TRY TO HIT REGULAR ENEMY
         EnemyHealth enemy = collision.GetComponent<EnemyHealth>();
         if (enemy != null)
         {
@@ -38,7 +38,16 @@ public class Bullet : MonoBehaviour
             return;
         }
 
-        // 2. NEW: Check for Rustable Items (Puzzle Obstacles)
+        // 2. TRY TO HIT THE BOSS (Check parent too in case of swords)
+        MushroomBoss boss = collision.GetComponentInParent<MushroomBoss>();
+        if (boss != null)
+        {
+            boss.TakeDamage(damage);
+            Destroy(gameObject);
+            return;
+        }
+
+
         RustableItem rustItem = collision.GetComponent<RustableItem>();
         if (rustItem != null)
         {

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
@@ -14,21 +14,27 @@ public class PlayerHealth : MonoBehaviour
     [Header("Visuals")]
     public Animator healthBarAnimator;
     public SpriteRenderer playerSprite;
+
+    // Set these in Inspector after creating your layers
+    public int normalLayer;       // the "Player" layer number
+    public int invincibleLayer;   // the "PlayerInvincible" layer number
+
     private Rigidbody2D rb;
 
     void Start()
     {
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
+        // Grab layer numbers automatically by name so you don't have to type numbers
+        normalLayer = LayerMask.NameToLayer("Player");
+        invincibleLayer = LayerMask.NameToLayer("PlayerInvincible");
         UpdateUI();
     }
 
-    // USE THIS for solid objects (No 'Is Trigger' required)
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy") && !isInvincible)
         {
-            // We pass the enemy's position to calculate knockback direction
             TakeDamage(1, collision.transform.position);
         }
     }
@@ -36,7 +42,6 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damage, Vector2 enemyPosition)
     {
         if (isInvincible || currentHealth <= 0) return;
-
         currentHealth -= damage;
         UpdateUI();
 
@@ -46,6 +51,7 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
+            StopAllCoroutines();
             StartCoroutine(ApplyKnockback(enemyPosition));
             StartCoroutine(IFrames());
         }
@@ -53,8 +59,8 @@ public class PlayerHealth : MonoBehaviour
 
     private IEnumerator ApplyKnockback(Vector2 enemyPos)
     {
-        // Push away from enemy
         float pushDir = (transform.position.x < enemyPos.x) ? -1f : 1f;
+        if (Mathf.Abs(transform.position.x - enemyPos.x) < 0.05f) pushDir = 1f;
         rb.linearVelocity = Vector2.zero;
         rb.AddForce(new Vector2(pushDir * knockbackForce, knockbackUpwardFactor), ForceMode2D.Impulse);
         yield return new WaitForSeconds(0.2f);
@@ -63,30 +69,14 @@ public class PlayerHealth : MonoBehaviour
     void UpdateUI()
     {
         if (healthBarAnimator != null)
-        {
             healthBarAnimator.SetInteger("currentHealth", currentHealth);
-            healthBarAnimator.Update(0);
-        }
-    }
-
-    public void RestoreFullHealth()
-    {
-        currentHealth = maxHealth;
-        UpdateUI();
-        if (playerSprite != null) StartCoroutine(HealFlash());
-    }
-
-    private IEnumerator HealFlash()
-    {
-        playerSprite.color = Color.green;
-        yield return new WaitForSeconds(0.3f);
-        playerSprite.color = Color.white;
     }
 
     IEnumerator IFrames()
     {
         isInvincible = true;
-        // Flicker effect
+        gameObject.layer = invincibleLayer; // swap layer → physics ignores enemy collision instantly
+
         for (int i = 0; i < 5; i++)
         {
             playerSprite.color = new Color(1, 1, 1, 0.2f);
@@ -94,6 +84,23 @@ public class PlayerHealth : MonoBehaviour
             playerSprite.color = Color.white;
             yield return new WaitForSeconds(0.1f);
         }
+
+        gameObject.layer = normalLayer; // swap back → collision resumes
         isInvincible = false;
+    }
+
+    public void RestoreFullHealth()
+    {
+        currentHealth = maxHealth;
+        UpdateUI();
+        if (playerSprite != null)
+            StartCoroutine(HealFlash());
+    }
+
+    private IEnumerator HealFlash()
+    {
+        playerSprite.color = Color.green;
+        yield return new WaitForSeconds(0.3f);
+        playerSprite.color = Color.white;
     }
 }
