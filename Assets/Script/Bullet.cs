@@ -5,9 +5,10 @@ public class Bullet : MonoBehaviour
     public float speed = 15f;
     public float lifeTime = 2f;
     public int damage = 1;
-    public float rustPower = 20f; // How much "rust" this water drop applies
+    public float rustPower = 20f;
 
     private Vector2 direction;
+    private bool hasHit = false; // prevent double-triggers
 
     public void SetDirection(Vector2 dir, float playerScaleX)
     {
@@ -24,40 +25,68 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
+        if (hasHit) return; // stop moving after hit
         transform.Translate(direction * speed * Time.deltaTime, Space.World);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // 1. TRY TO HIT REGULAR ENEMY
+        if (hasHit) return;
+
         EnemyHealth enemy = collision.GetComponent<EnemyHealth>();
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
-            Destroy(gameObject);
+            PlayExplode();
             return;
         }
 
-        // 2. TRY TO HIT THE BOSS (Check parent too in case of swords)
         MushroomBoss boss = collision.GetComponentInParent<MushroomBoss>();
         if (boss != null)
         {
             boss.TakeDamage(damage);
-            Destroy(gameObject);
+            PlayExplode();
             return;
         }
-
 
         RustableItem rustItem = collision.GetComponent<RustableItem>();
         if (rustItem != null)
         {
             rustItem.ApplyWaterDamage(rustPower);
-            Destroy(gameObject); // Water disappears when hitting the metal
+            PlayExplode();
             return;
         }
 
-        // 3. Check for Walls/Ground
         if (collision.CompareTag("Ground"))
+        {
+            PlayExplode();
+        }
+    }
+    void PlayExplode()
+    {
+        hasHit = true;
+
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null) col.enabled = false;
+
+        Animator anim = GetComponent<Animator>();
+        if (anim != null)
+        {
+            anim.SetTrigger("Explode"); // triggers the transition properly
+            float clipLength = 0.3f;
+
+            // Get BulletExplode clip length
+            foreach (AnimationClip clip in anim.runtimeAnimatorController.animationClips)
+            {
+                if (clip.name == "BulletExplode")
+                {
+                    clipLength = clip.length;
+                    break;
+                }
+            }
+            Destroy(gameObject, clipLength);
+        }
+        else
         {
             Destroy(gameObject);
         }

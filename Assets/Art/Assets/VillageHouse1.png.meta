@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 957b9279e8413064b8721b4f260b1b8e
+guid: 6ac3469f057caba419e62215373b45fb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6596634324988350555
-    second: VillageFloor_0
+      213: 3331106776637792807
+    second: VillageHouse1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: VillageFloor_0
+      name: VillageHouse1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 23
+        x: 21
+        y: 42
+        width: 78
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5afabe9280c0474a0800000000000000
-      internalID: -6596634324988350555
+      spriteID: 7226462e6f77a3e20800000000000000
+      internalID: 3331106776637792807
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      VillageFloor_0: -6596634324988350555
+      VillageHouse1_0: 3331106776637792807
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
