@@ -7,15 +7,10 @@ public class MushroomBoss : MonoBehaviour
     [Header("Health & Visuals")]
     public float maxHealth = 30f;
     private float currentHealth;
+    public Slider healthSlider;
     public Color damageColor = Color.red;
     private Color originalColor;
     private SpriteRenderer spriteRenderer;
-
-    [Header("Health Bar")]
-    public GameObject bossHUD;
-    public Image healthBarFill;          // Image Type must be Filled + Horizontal in Inspector
-    public float healthBarLerpSpeed = 5f;
-    private float targetFillAmount = 1f;
 
     [Header("Movement")]
     public float walkSpeed = 1.2f;
@@ -23,24 +18,24 @@ public class MushroomBoss : MonoBehaviour
     private float currentSpeed;
 
     [Header("Phase Two - Ceiling Attack")]
-    public float ceilingY = 40f;
-    public float returnY = 25f;
-    public float ceilingNailInterval = 0.18f;
-    public int ceilingNailCount = 20;
-    public float ceilingDuration = 3f;
+    public float ceilingY = 10f;              // Y position above the room (off screen)
+    public float returnY = 1f;               // Y position boss lands back on ground
+    public float ceilingNailInterval = 0.18f; // How fast nails rain down
+    public int ceilingNailCount = 20;         // Total nails during ceiling phase
+    public float ceilingDuration = 3f;        // How long boss stays hidden up top
 
     [Header("Setup")]
     public Transform player;
     public GameObject nailPrefab;
     public Transform[] nailSpawnPoints;
-    public ExitWall exitWall;            // drag your ExitWall GameObject here
 
     private Rigidbody2D rb;
     private Animator anim;
-    private PolygonCollider2D col;
+    private Collider2D col;
     private bool isInvulnerable = false;
     private bool isPhaseTwo = false;
     private bool isDead = false;
+    private bool fightStarted = false;
 
     void Start()
     {
@@ -49,44 +44,16 @@ public class MushroomBoss : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        col = GetComponent<PolygonCollider2D>();
-
-        if (col == null) Debug.LogError("NO COLLIDER FOUND ON BOSS");
-        if (rb == null) Debug.LogError("NO RIGIDBODY FOUND ON BOSS");
+        col = GetComponent<Collider2D>();
 
         if (spriteRenderer != null) originalColor = spriteRenderer.color;
         if (player == null) player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        if (bossHUD != null) bossHUD.SetActive(false);
-
-        // Make sure fill starts at full
-        if (healthBarFill != null)
-        {
-            healthBarFill.fillAmount = 1f;
-            targetFillAmount = 1f;
-        }
-
+        // Don't start routine here — wait for BossRoomTrigger to call PlayIntroScream
         rb.simulated = false;
     }
 
-    void Update()
-    {
-        if (isDead || player == null) return;
-
-        float dirToPlayer = player.position.x - transform.position.x;
-        transform.localScale = new Vector3(dirToPlayer > 0 ? 1f : -1f, 1f, 1f);
-
-        // Smoothly animate health bar fill toward target
-        if (healthBarFill != null && Mathf.Abs(healthBarFill.fillAmount - targetFillAmount) > 0.001f)
-        {
-            healthBarFill.fillAmount = Mathf.Lerp(
-                healthBarFill.fillAmount,
-                targetFillAmount,
-                Time.deltaTime * healthBarLerpSpeed
-            );
-        }
-    }
-
+    // Add this method
     public IEnumerator PlayIntroScream()
     {
         isInvulnerable = true;
@@ -97,8 +64,16 @@ public class MushroomBoss : MonoBehaviour
 
         isInvulnerable = false;
         rb.simulated = true;
+        fightStarted = true;
 
         StartCoroutine(MainBossRoutine());
+    }
+
+    void Update()
+    {
+        if (isDead || player == null) return;
+        float dirToPlayer = player.position.x - transform.position.x;
+        transform.localScale = new Vector3(dirToPlayer > 0 ? 1f : -1f, 1f, 1f);
     }
 
     IEnumerator MainBossRoutine()
@@ -164,18 +139,7 @@ public class MushroomBoss : MonoBehaviour
     {
         if (isInvulnerable || isDead) return;
         currentHealth -= amount;
-        currentHealth = Mathf.Max(currentHealth, 0f);
-
-        // Set target — Update() lerps fill toward this each frame
-        targetFillAmount = currentHealth / maxHealth;
-
-        // Force an immediate partial update so it never looks frozen
-        if (healthBarFill != null)
-            healthBarFill.fillAmount = Mathf.Max(
-                healthBarFill.fillAmount - 0.01f,  // nudge it so lerp activates
-                targetFillAmount
-            );
-
+        if (healthSlider != null) healthSlider.value = currentHealth;
         StartCoroutine(FlashDamage());
 
         if (currentHealth <= maxHealth * 0.5f && !isPhaseTwo)
@@ -198,10 +162,14 @@ public class MushroomBoss : MonoBehaviour
         isPhaseTwo = true;
         rb.linearVelocity = Vector2.zero;
 
+        // Play scream animation
         anim.SetTrigger("Scream");
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2f); // let MushroomScream finish
 
+        // Speed up all movement for phase 2
         currentSpeed = phaseTwoSpeed;
+
+        // Now do the ceiling attack
         yield return StartCoroutine(CeilingAttack());
 
         isInvulnerable = false;
@@ -209,13 +177,15 @@ public class MushroomBoss : MonoBehaviour
 
     IEnumerator CeilingAttack()
     {
-        rb.linearVelocity = Vector2.zero;
-        rb.simulated = false;
-        col.enabled = false;
-        spriteRenderer.enabled = false;
+        // 1. Boss flies up off screen
+        rb.simulated = false;             // disable physics so we move it manually
+        col.enabled = false;              // no collisions while off screen
+        spriteRenderer.enabled = false;   // hide the boss
 
+        // Teleport above the room
         transform.position = new Vector2(transform.position.x, ceilingY);
 
+        // 2. Rain nails down rapidly from random spawn points
         for (int i = 0; i < ceilingNailCount; i++)
         {
             if (nailSpawnPoints.Length > 0)
@@ -226,18 +196,16 @@ public class MushroomBoss : MonoBehaviour
             yield return new WaitForSeconds(ceilingNailInterval);
         }
 
+        // 3. Wait any remaining ceiling duration
         yield return new WaitForSeconds(ceilingDuration);
 
-        transform.position = new Vector2(player.position.x, returnY);
-        yield return new WaitForSeconds(0.05f);
-
+        // 4. Boss slams back down to the ground
+        transform.position = new Vector2(player.position.x, returnY); // land near player
         rb.simulated = true;
-        rb.linearVelocity = Vector2.zero;
         col.enabled = true;
         spriteRenderer.enabled = true;
 
-        anim.SetTrigger("Land");
-        yield return new WaitForSeconds(0.5f);
+        anim.SetTrigger("Land"); // reuse your landing animation
     }
 
     void SpawnNails(int count)
@@ -253,19 +221,14 @@ public class MushroomBoss : MonoBehaviour
     IEnumerator Death()
     {
         isDead = true;
-        rb.linearVelocity = Vector2.zero;
         anim.SetTrigger("Die");
-        if (col != null) col.enabled = false;
+        col.enabled = false;
         rb.simulated = false;
+        yield return null;
+    }
 
-        // Drain health bar to zero visually
-        targetFillAmount = 0f;
-        yield return new WaitForSeconds(1f);
-
-        // Hide HUD
-        if (bossHUD != null) bossHUD.SetActive(false);
-
-        // Open the exit
-        if (exitWall != null) exitWall.OpenWall();
+    public bool IsDead()
+    {
+        return isDead;
     }
 }

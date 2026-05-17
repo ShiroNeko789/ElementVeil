@@ -1,70 +1,68 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System;
+using System.Collections;
 
 public class HealingFountain : MonoBehaviour
 {
-    private bool playerInRange = false;
-    private PlayerHealth playerHealth;
+    [Header("UI")]
+    public GameObject interactButton;   // shows when player is near
+    public GameObject savePanel;        // the PSP-style saving panel
+    public float savePanelDuration = 2f;
 
-    [Header("Mobile UI")]
-    public GameObject interactButton; // Drag the UI Button from your Canvas here
+    [Header("References")]
+    public PlayerHealth playerHealth;
+
+    private bool playerNearby = false;
 
     void Start()
     {
-        // Ensure the button starts hidden when the game begins
-        if (interactButton != null)
-        {
-            interactButton.SetActive(false);
-        }
-    }
-
-    // Link this function to the OnClick() event of your UI Button
-    public void Interact()
-    {
-        // Only heal if the player is in range and actually needs health
-        if (playerInRange && playerHealth != null)
-        {
-            if (playerHealth.currentHealth < playerHealth.maxHealth)
-            {
-                playerHealth.RestoreFullHealth();
-                Debug.Log("Health Restored!");
-
-                // Optional: Hide button after use if the fountain is one-time use
-                // interactButton.SetActive(false);
-            }
-            else
-            {
-                Debug.Log("Player already at full health.");
-            }
-        }
+        if (interactButton != null) interactButton.SetActive(false);
+        if (savePanel != null) savePanel.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = true;
+        if (!other.CompareTag("Player")) return;
+        playerNearby = true;
+        if (interactButton != null) interactButton.SetActive(true);
+        if (playerHealth == null)
             playerHealth = other.GetComponent<PlayerHealth>();
-
-            // Show the interact button
-            if (interactButton != null)
-            {
-                interactButton.SetActive(true);
-            }
-        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = false;
-            playerHealth = null;
+        if (!other.CompareTag("Player")) return;
+        playerNearby = false;
+        if (interactButton != null) interactButton.SetActive(false);
+    }
 
-            // Hide the interact button when walking away
-            if (interactButton != null)
-            {
-                interactButton.SetActive(false);
-            }
+    public void OnInteractPressed()
+    {
+        if (!playerNearby) return;
+        playerHealth.RestoreFullHealth();
+        interactButton.SetActive(false);
+        StartCoroutine(ShowSavePanel());
+    }
+
+    IEnumerator ShowSavePanel()
+    {
+        // Freeze player
+        Time.timeScale = 0f;
+        Rigidbody2D playerRb = playerHealth.GetComponent<Rigidbody2D>();
+        if (playerRb != null) playerRb.linearVelocity = Vector2.zero;
+
+        // Save the game
+        GameSaveManager.Get()?.SaveGame();
+
+        if (savePanel != null)
+        {
+            savePanel.SetActive(true);
+            yield return new WaitForSecondsRealtime(savePanelDuration);
+            savePanel.SetActive(false);
         }
+
+        // Unfreeze player
+        Time.timeScale = 1f;
     }
 }

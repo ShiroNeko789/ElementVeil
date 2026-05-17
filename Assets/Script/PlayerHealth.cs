@@ -66,6 +66,11 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
     }
 
+    public void UpdateUIPublic()
+    {
+        UpdateUI();
+    }
+
     void UpdateUI()
     {
         if (healthBarAnimator != null)

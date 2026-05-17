@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: 7d9169bf1de41914ebaa2b18437ed448
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8868273861466250412
+    second: UI buttons-Recovered_0
+  - first:
+      213: -8697044966073440590
+    second: UI buttons-Recovered_1
+  - first:
+      213: 755337014450168997
+    second: UI buttons-Recovered_2
+  - first:
+      213: 1462455804444363866
+    second: UI buttons-Recovered_3
+  - first:
+      213: 8943193719194318842
+    second: UI buttons-Recovered_4
+  - first:
+      213: -8448521340828684896
+    second: UI buttons-Recovered_5
+  - first:
+      213: 929116411190373128
+    second: UI buttons-Recovered_6
+  - first:
+      213: -219295540555245025
+    second: UI buttons-Recovered_7
+  - first:
+      213: 1254131362938730834
+    second: UI buttons-Recovered_8
+  - first:
+      213: 8335116519710891020
+    second: UI buttons-Recovered_9
+  - first:
+      213: 6056107344771218547
+    second: UI buttons-Recovered_10
+  - first:
+      213: -5401125009521707066
+    second: UI buttons-Recovered_11
+  - first:
+      213: -7328548268787334633
+    second: UI buttons-Recovered_12
+  - first:
+      213: 4698064733072314199
+    second: UI buttons-Recovered_13
+  - first:
+      213: 1777019469842898339
+    second: UI buttons-Recovered_14
+  - first:
+      213: 1316805495801634550
+    second: UI buttons-Recovered_15
+  - first:
+      213: -3229641956337079522
+    second: UI buttons-Recovered_16
+  - first:
+      213: 2690386134255106217
+    second: UI buttons-Recovered_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UI buttons-Recovered_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 545
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cacd3934710721b70800000000000000
+      internalID: 8868273861466250412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI buttons-Recovered_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 545
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b6e799aea3ed4780800000000000000
+      internalID: -8697044966073440590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI buttons-Recovered_2
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 529
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a4a100430f7b7a00800000000000000
+      internalID: 755337014450168997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI buttons-Recovered_3
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 529
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c4d934ecfab4410800000000000000
+      internalID: 1462455804444363866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI buttons-Recovered_4
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 449
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af7f416fd4b9c1c70800000000000000
+      internalID: 8943193719194318842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI buttons-Recovered_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 449
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad699a4a92d0ca80800000000000000
+      internalID: -8448521340828684896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI buttons-Recovered_6
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 433
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80becfb0472e4ec00800000000000000
+      internalID: 929116411190373128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI buttons-Recovered_7
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 417
+        width: 66
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1a90642ed7e4fcf0800000000000000
+      internalID: -219295540555245025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI buttons-Recovered_8
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 369
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 259b3a574d1976110800000000000000
+      internalID: 1254131362938730834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI buttons-Recovered_9
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 369
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0c9bd630584ca370800000000000000
+      internalID: 8335116519710891020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI buttons-Recovered_10
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 289
+        width: 226
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37cf8be1b8d9b0450800000000000000
+      internalID: 6056107344771218547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI buttons-Recovered_11
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 289
+        width: 226
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c7faf39b695b05b0800000000000000
+      internalID: -5401125009521707066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI buttons-Recovered_12
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 209
+        width: 226
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71280a78d24cb4a90800000000000000
+      internalID: -7328548268787334633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI buttons-Recovered_13
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 209
+        width: 226
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75fc09abbf0e23140800000000000000
+      internalID: 4698064733072314199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI buttons-Recovered_14
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 145
+        width: 210
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ad50f2facd39a810800000000000000
+      internalID: 1777019469842898339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI buttons-Recovered_15
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 145
+        width: 210
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fed9872f9b364210800000000000000
+      internalID: 1316805495801634550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI buttons-Recovered_16
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 84
+        width: 210
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1ba4d880c10e23d0800000000000000
+      internalID: -3229641956337079522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI buttons-Recovered_17
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 84
+        width: 210
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a879e05feb265520800000000000000
+      internalID: 2690386134255106217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      UI buttons-Recovered_0: 8868273861466250412
+      UI buttons-Recovered_1: -8697044966073440590
+      UI buttons-Recovered_10: 6056107344771218547
+      UI buttons-Recovered_11: -5401125009521707066
+      UI buttons-Recovered_12: -7328548268787334633
+      UI buttons-Recovered_13: 4698064733072314199
+      UI buttons-Recovered_14: 1777019469842898339
+      UI buttons-Recovered_15: 1316805495801634550
+      UI buttons-Recovered_16: -3229641956337079522
+      UI buttons-Recovered_17: 2690386134255106217
+      UI buttons-Recovered_2: 755337014450168997
+      UI buttons-Recovered_3: 1462455804444363866
+      UI buttons-Recovered_4: 8943193719194318842
+      UI buttons-Recovered_5: -8448521340828684896
+      UI buttons-Recovered_6: 929116411190373128
+      UI buttons-Recovered_7: -219295540555245025
+      UI buttons-Recovered_8: 1254131362938730834
+      UI buttons-Recovered_9: 8335116519710891020
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,11 +4,20 @@ using UnityEngine.UI;
 public class PlayerMagnet : MonoBehaviour
 {
     [Header("UI Groups")]
-    public GameObject combatUIGroup; // Drag the 'CombatUI' object here
-    public GameObject magnetUIGroup; // Drag the 'MagnetUI' object here
+    public GameObject combatUIGroup;
+    public GameObject magnetUIGroup;
+
+    [Header("Polarity Button Images")]
+    public Image polarityButtonImage;
+    public Sprite northSprite;
+    public Sprite southSprite;
+
+    [Header("Switch Button Image")]
+    public Image switchButtonImage;     // Image on the button that toggles between modes
+    public Sprite shootModeSprite;      // shown when currently in shoot mode
+    public Sprite magnetModeSprite;     // shown when currently in magnet mode
 
     [Header("Polarity Settings")]
-    public Image polarityButtonImage; // The button that turns Red/Blue
     public bool playerIsNorth = true;
     public bool magnetModeActive = false;
 
@@ -16,36 +25,50 @@ public class PlayerMagnet : MonoBehaviour
 
     void Start()
     {
-        // Set the initial state when the game starts
         magnetModeActive = false;
         combatUIGroup.SetActive(true);
         magnetUIGroup.SetActive(false);
+        UpdatePolarityImage();
+        UpdateSwitchButtonImage();
     }
 
-    // LINK THIS TO YOUR 'SWITCH' BUTTON
     public void ToggleMagnetMode()
     {
         magnetModeActive = !magnetModeActive;
 
         if (magnetModeActive)
         {
-            combatUIGroup.SetActive(false); // Hide Shoot/Jump
-            magnetUIGroup.SetActive(true);  // Show Polarity
+            combatUIGroup.SetActive(false);
+            magnetUIGroup.SetActive(true);
         }
         else
         {
-            combatUIGroup.SetActive(true);  // Show Shoot/Jump
-            magnetUIGroup.SetActive(false); // Hide Polarity
+            combatUIGroup.SetActive(true);
+            magnetUIGroup.SetActive(false);
             DeselectTarget();
         }
+
+        UpdateSwitchButtonImage();
     }
 
-    // LINK THIS TO YOUR 'POLARITY' BUTTON
     public void TogglePolarity()
     {
         playerIsNorth = !playerIsNorth;
-        // Visual feedback
-        polarityButtonImage.color = playerIsNorth ? Color.red : Color.blue;
+        UpdatePolarityImage();
+    }
+
+    void UpdatePolarityImage()
+    {
+        if (polarityButtonImage == null) return;
+        polarityButtonImage.sprite = playerIsNorth ? northSprite : southSprite;
+    }
+
+    void UpdateSwitchButtonImage()
+    {
+        if (switchButtonImage == null) return;
+        // Show magnet icon when in shoot mode (press to go to magnet)
+        // Show shoot icon when in magnet mode (press to go back to shoot)
+        switchButtonImage.sprite = magnetModeActive ? shootModeSprite : magnetModeSprite;
     }
 
     public void SelectNewTarget(MagneticItem item)
@@ -68,9 +91,6 @@ public class PlayerMagnet : MonoBehaviour
     void Update()
     {
         if (magnetModeActive && selectedItem != null)
-        {
-            // Move based on the logic we built (Opposites Attract / Likes Repel)
             selectedItem.ApplyMagneticForce(transform.position, 10f, playerIsNorth);
-        }
     }
 }
