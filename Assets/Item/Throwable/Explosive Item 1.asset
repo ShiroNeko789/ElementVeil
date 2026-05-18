@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Explosive Item
   icon: {fileID: -6080437216487095033, guid: 54d998e9ae1f8574680171c452078012, type: 3}
-  description: 
+  description: Be careful using this
   isStackable: 0
   quantity: 1
   projectilePrefab: {fileID: 7481178406455214897, guid: 1d194264a0dc8de42b075ad8add2eeab, type: 3}
