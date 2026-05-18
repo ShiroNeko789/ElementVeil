@@ -1,28 +1,25 @@
 fileFormatVersion: 2
-guid: cb035c151917a534aac59223a1df57fb
+guid: 899b6267bab99a649a3d1b5e0c2e78c2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2859394428688601238
-    second: RubbishDead_0
+      213: -2535969234006040182
+    second: rubbish boss attack_0
   - first:
-      213: 2782821223861742465
-    second: RubbishDead_1
+      213: -8472992442023799117
+    second: rubbish boss attack_1
   - first:
-      213: -5282177402397644893
-    second: RubbishDead_2
+      213: 5773946636570105037
+    second: rubbish boss attack_2
   - first:
-      213: -3866446143508982982
-    second: RubbishDead_3
+      213: -4953738549783065395
+    second: rubbish boss attack_3
   - first:
-      213: 8264974626493766378
-    second: RubbishDead_4
+      213: 5267655633048025105
+    second: rubbish boss attack_4
   - first:
-      213: 3060605176228893781
-    second: RubbishDead_5
-  - first:
-      213: 4001896730161281921
-    second: RubbishDead_6
+      213: 6876755791349239377
+    second: rubbish boss attack_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RubbishDead_0
+      name: rubbish boss attack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -146,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 69017ba451c9ea720800000000000000
-      internalID: 2859394428688601238
+      spriteID: a8120c5fa6d6eccd0800000000000000
+      internalID: -2535969234006040182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RubbishDead_1
+      name: rubbish boss attack_1
       rect:
         serializedVersion: 2
         x: 128
@@ -168,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 18b62b9b8219e9620800000000000000
-      internalID: 2782821223861742465
+      spriteID: 3b61a9c0442e96a80800000000000000
+      internalID: -8472992442023799117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RubbishDead_2
+      name: rubbish boss attack_2
       rect:
         serializedVersion: 2
         x: 256
@@ -190,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a72e7183afe1b6b0800000000000000
-      internalID: -5282177402397644893
+      spriteID: dc492d0dfdd212050800000000000000
+      internalID: 5773946636570105037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RubbishDead_3
+      name: rubbish boss attack_3
       rect:
         serializedVersion: 2
         x: 384
@@ -212,14 +209,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a33d7f0c7bf975ac0800000000000000
-      internalID: -3866446143508982982
+      spriteID: dcc8506f809c04bb0800000000000000
+      internalID: -4953738549783065395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RubbishDead_4
+      name: rubbish boss attack_4
       rect:
         serializedVersion: 2
         x: 512
@@ -234,14 +231,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aea17c112a613b270800000000000000
-      internalID: 8264974626493766378
+      spriteID: 118b9e693e87a1940800000000000000
+      internalID: 5267655633048025105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RubbishDead_5
+      name: rubbish boss attack_5
       rect:
         serializedVersion: 2
         x: 640
@@ -256,30 +253,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 55458d62134797a20800000000000000
-      internalID: 3060605176228893781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RubbishDead_6
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 18b7f058fd7998730800000000000000
-      internalID: 4001896730161281921
+      spriteID: 15e4b7625f42f6f50800000000000000
+      internalID: 6876755791349239377
       vertices: []
       indices: 
       edges: []
@@ -288,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5c2394b4c64edd54ea9589dc7d192278
+    spriteID: c7ebe01cffa27b04a8608f36bac23d3a
     internalID: 0
     vertices: []
     indices: 
@@ -298,13 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      RubbishDead_0: 2859394428688601238
-      RubbishDead_1: 2782821223861742465
-      RubbishDead_2: -5282177402397644893
-      RubbishDead_3: -3866446143508982982
-      RubbishDead_4: 8264974626493766378
-      RubbishDead_5: 3060605176228893781
-      RubbishDead_6: 4001896730161281921
+      rubbish boss attack_0: -2535969234006040182
+      rubbish boss attack_1: -8472992442023799117
+      rubbish boss attack_2: 5773946636570105037
+      rubbish boss attack_3: -4953738549783065395
+      rubbish boss attack_4: 5267655633048025105
+      rubbish boss attack_5: 6876755791349239377
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
