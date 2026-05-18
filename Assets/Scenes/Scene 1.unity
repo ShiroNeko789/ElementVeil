@@ -9347,11 +9347,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293219706496147670, guid: 0293cc11ff53dea46a86785e746e03c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 228
+      value: 5.9
       objectReference: {fileID: 0}
     - target: {fileID: 7293219706496147670, guid: 0293cc11ff53dea46a86785e746e03c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.72
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 7293219706496147670, guid: 0293cc11ff53dea46a86785e746e03c3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18741,6 +18741,10 @@ PrefabInstance:
     - target: {fileID: 948234200178316833, guid: 2662fe5506b9fdf49bc8ccdf1831bd63, type: 3}
       propertyPath: m_Name
       value: PausePanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 948234200178316833, guid: 2662fe5506b9fdf49bc8ccdf1831bd63, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1396985386942121268, guid: 2662fe5506b9fdf49bc8ccdf1831bd63, type: 3}
       propertyPath: m_Pivot.x
