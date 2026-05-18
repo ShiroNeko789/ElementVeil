@@ -7,13 +7,12 @@ public class WorkbenchSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
     public WorkbenchUI workbenchUI;
     public Item heldItem = null;
 
-    private Image iconImage;      // the Icon child image
-    private Image bgImage;        // the background slot image
+    private Image iconImage;
+    private Image bgImage;
 
     void Awake()
     {
         Image[] images = GetComponentsInChildren<Image>(true);
-        // images[0] = background (root), images[1] = Icon child
         if (images.Length >= 2)
         {
             bgImage = images[0];
@@ -25,7 +24,6 @@ public class WorkbenchSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
             iconImage = images[0];
         }
 
-        // Hide icon at start
         if (iconImage != null) iconImage.enabled = false;
     }
 
@@ -42,16 +40,34 @@ public class WorkbenchSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
     public void OnDrop(PointerEventData eventData)
     {
         Debug.Log("OnDrop fired on: " + gameObject.name);
-        if (eventData.pointerDrag == null) { Debug.LogError("pointerDrag null"); return; }
+
+        if (eventData.pointerDrag == null)
+        {
+            Debug.LogError("pointerDrag null");
+            return;
+        }
 
         DraggableItem dragged = eventData.pointerDrag.GetComponent<DraggableItem>();
-        if (dragged == null) { Debug.LogError("No DraggableItem on dragged object"); return; }
-        if (dragged.item == null) { Debug.LogError("DraggableItem.item is null"); return; }
-        if (heldItem != null) { Debug.Log("Slot occupied by: " + heldItem.itemName); return; }
+        if (dragged == null)
+        {
+            Debug.LogError("No DraggableItem on dragged object");
+            return;
+        }
+
+        if (dragged.item == null)
+        {
+            Debug.LogError("DraggableItem.item is null");
+            return;
+        }
+
+        if (heldItem != null)
+        {
+            Debug.Log("Slot occupied by: " + heldItem.itemName);
+            return;
+        }
 
         heldItem = dragged.item;
 
-        // Show icon on the child Image, not the background
         if (iconImage != null)
         {
             iconImage.sprite = heldItem.icon;
@@ -59,8 +75,13 @@ public class WorkbenchSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
             iconImage.color = Color.white;
         }
 
-        Debug.Log("Placed: " + heldItem.itemName);
-        workbenchUI.OnSlotChanged();
+        Debug.Log("Placed: " + heldItem.itemName + " into " + gameObject.name);
+
+        // THIS is the key line — must call OnSlotChanged after every drop
+        if (workbenchUI != null)
+            workbenchUI.OnSlotChanged();
+        else
+            Debug.LogError("workbenchUI is null on slot: " + gameObject.name);
     }
 
     public void ClearSlot()

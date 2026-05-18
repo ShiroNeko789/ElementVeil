@@ -5,6 +5,8 @@ using System.Collections;
 
 public class PauseMenu : MonoBehaviour
 {
+    public static PauseMenu Instance;
+
     [Header("Panels")]
     public GameObject pausePanel;
     public GameObject savingPanel;
@@ -16,8 +18,8 @@ public class PauseMenu : MonoBehaviour
     public Button mainMenuButton;
 
     public float savingDisplayTime = 1.5f;
-    public static PauseMenu Instance;
     private bool isPaused = false;
+    private float lastPauseTime = -1f;
 
     void Awake()
     {
@@ -28,51 +30,54 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        // Force panels inactive
         if (pausePanel != null) pausePanel.SetActive(false);
         if (savingPanel != null) savingPanel.SetActive(false);
 
-        // Wire buttons fresh every start — removes stale listeners first
-        WireButton(pauseButton, TogglePause);
-        WireButton(resumeButton, Resume);
-        WireButton(saveButton, OnSavePressed);
-        WireButton(mainMenuButton, GoToMainMenu);
-
-        Debug.Log("PauseMenu Start wired — ID: " + GetInstanceID());
-    }
-
-    // Helper that clears old listeners then adds fresh one
-    void WireButton(Button btn, UnityEngine.Events.UnityAction action)
-    {
-        if (btn == null)
+        if (pauseButton != null)
         {
-            Debug.LogWarning("PauseMenu: a button is not assigned in Inspector");
-            return;
+            pauseButton.onClick.RemoveAllListeners();
+            pauseButton.onClick.AddListener(TogglePause);
         }
-        btn.onClick.RemoveAllListeners();
-        btn.onClick.AddListener(action);
-        Debug.Log("Wired button: " + btn.gameObject.name);
+        if (resumeButton != null)
+        {
+            resumeButton.onClick.RemoveAllListeners();
+            resumeButton.onClick.AddListener(Resume);
+        }
+        if (saveButton != null)
+        {
+            saveButton.onClick.RemoveAllListeners();
+            saveButton.onClick.AddListener(OnSavePressed);
+        }
+        if (mainMenuButton != null)
+        {
+            mainMenuButton.onClick.RemoveAllListeners();
+            mainMenuButton.onClick.AddListener(GoToMainMenu);
+        }
+
+        Debug.Log("PauseMenu Start — isPaused: " + isPaused);
     }
 
     public void TogglePause()
     {
-        Debug.Log("TogglePause — isPaused: " + isPaused + " timeScale: " + Time.timeScale);
+        // Prevent double firing within 0.2 seconds
+        if (Time.unscaledTime - lastPauseTime < 0.2f)
+        {
+            Debug.Log("TogglePause blocked — too fast");
+            return;
+        }
+        lastPauseTime = Time.unscaledTime;
+
+        Debug.Log("TogglePause called — isPaused: " + isPaused);
         if (isPaused) Resume();
         else Pause();
     }
 
     public void Pause()
     {
-        Debug.Log("Pause() called");
-        Debug.Log("pausePanel is null: " + (pausePanel == null));
-        if (pausePanel != null)
-        {
-            Debug.Log("pausePanel parent active: " + pausePanel.transform.parent.gameObject.activeSelf);
-            pausePanel.SetActive(true);
-            Debug.Log("pausePanel active after set: " + pausePanel.activeSelf);
-        }
         isPaused = true;
+        if (pausePanel != null) pausePanel.SetActive(true);
         Time.timeScale = 0f;
+        Debug.Log("Paused successfully");
     }
 
     public void Resume()
@@ -83,16 +88,15 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Resumed");
     }
 
+    public bool IsPaused() { return isPaused; }
+
     public void OnSavePressed()
     {
-        Debug.Log("Save pressed");
-
         if (GameSaveManager.Get() == null)
         {
-            Debug.LogError("GameSaveManager not found anywhere in scene");
+            Debug.LogError("GameSaveManager not found");
             return;
         }
-
         GameSaveManager.Get().SaveGame();
         StartCoroutine(ShowSavingPanel());
     }
@@ -116,13 +120,6 @@ public class PauseMenu : MonoBehaviour
 
     void OnDestroy()
     {
-        // Always restore time when this object is destroyed
         Time.timeScale = 1f;
-    }
-
-    void Update()
-    {
-        if (pausePanel == null)
-            Debug.LogError("pausePanel is NULL on: " + gameObject.name);
     }
 }

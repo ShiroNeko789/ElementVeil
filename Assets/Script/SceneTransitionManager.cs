@@ -8,7 +8,11 @@ public class SceneTransitionManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
@@ -20,13 +24,12 @@ public class SceneTransitionManager : MonoBehaviour
 
     IEnumerator TransitionOut(string sceneName)
     {
-        // If SceneWipe exists in current scene, wipe to black first
+        // Wipe to black if SceneWipe exists
         if (SceneWipe.Instance != null)
             yield return StartCoroutine(SceneWipe.Instance.WipeIn());
         else
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.3f);
 
-        // Then go to loading screen
         LoadingScreen.TargetScene = sceneName;
         SceneManager.LoadScene("LoadingScreen");
     }

@@ -30,9 +30,12 @@ public class WorkbenchUI : MonoBehaviour
 
     void Start()
     {
+        // Auto-assign this WorkbenchUI to both slots
+        if (slotA != null) slotA.workbenchUI = this;
+        if (slotB != null) slotB.workbenchUI = this;
+
         workbenchPanel.SetActive(false);
 
-        // Hide result icon child at start
         if (resultIcon != null)
         {
             Image[] resultImages = resultIcon.GetComponentsInChildren<Image>(true);
@@ -86,7 +89,6 @@ public class WorkbenchUI : MonoBehaviour
             GameObject slotObj = Instantiate(itemSlotPrefab, itemGridContent);
             spawnedSlots.Add(slotObj);
 
-            // Set icon using same approach as InventoryUI
             Image[] images = slotObj.GetComponentsInChildren<Image>(true);
             if (images.Length >= 2)
             {
@@ -108,9 +110,14 @@ public class WorkbenchUI : MonoBehaviour
     public void OnSlotChanged()
     {
         currentMatchedRecipe = FindMatchingRecipe();
+        Debug.Log("OnSlotChanged — matched recipe: " +
+                  (currentMatchedRecipe == null ? "NULL" : currentMatchedRecipe.recipeName));
 
         Image[] resultImages = resultIcon != null ?
             resultIcon.GetComponentsInChildren<Image>(true) : null;
+
+        Debug.Log("Result images count: " +
+                  (resultImages == null ? "NULL" : resultImages.Length.ToString()));
 
         if (currentMatchedRecipe != null)
         {
@@ -119,11 +126,17 @@ public class WorkbenchUI : MonoBehaviour
                 resultImages[1].sprite = currentMatchedRecipe.result.icon;
                 resultImages[1].enabled = true;
                 resultImages[1].color = Color.white;
+                Debug.Log("Set result icon to: " + currentMatchedRecipe.result.itemName);
             }
             else if (resultIcon != null)
             {
                 resultIcon.sprite = currentMatchedRecipe.result.icon;
                 resultIcon.enabled = true;
+                Debug.Log("Set result icon (root) to: " + currentMatchedRecipe.result.itemName);
+            }
+            else
+            {
+                Debug.LogError("resultIcon is NULL — not assigned in Inspector");
             }
         }
         else
@@ -139,23 +152,57 @@ public class WorkbenchUI : MonoBehaviour
     {
         Item a = slotA.heldItem;
         Item b = slotB.heldItem;
+
+        Debug.Log("Finding recipe — SlotA: " + (a == null ? "NULL" : a.itemName) +
+                  " | SlotB: " + (b == null ? "NULL" : b.itemName));
+
         if (a == null || b == null) return null;
 
         foreach (CraftRecipe recipe in allRecipes)
         {
-            if (recipe.ingredients.Length < 2) continue;
+            if (recipe == null) { Debug.LogWarning("Null recipe in allRecipes"); continue; }
+            if (recipe.ingredients.Length < 2)
+            {
+                Debug.LogWarning("Recipe " + recipe.name + " has less than 2 ingredients");
+                continue;
+            }
+
+            Debug.Log("Checking recipe: " + recipe.recipeName +
+                      " needs: " + recipe.ingredients[0].item?.itemName +
+                      " + " + recipe.ingredients[1].item?.itemName);
+
+            Debug.Log("SlotA ref: " + a.GetInstanceID() +
+                      " Recipe ingredient 0 ref: " +
+                      recipe.ingredients[0].item?.GetInstanceID());
+
+            Debug.Log("SlotB ref: " + b.GetInstanceID() +
+                      " Recipe ingredient 1 ref: " +
+                      recipe.ingredients[1].item?.GetInstanceID());
+
             bool match =
                 (recipe.ingredients[0].item == a && recipe.ingredients[1].item == b) ||
                 (recipe.ingredients[0].item == b && recipe.ingredients[1].item == a);
-            if (match) return recipe;
+
+            if (match)
+            {
+                Debug.Log("Recipe matched: " + recipe.recipeName);
+                return recipe;
+            }
         }
+
+        Debug.Log("No matching recipe found");
         return null;
     }
 
     public void Craft()
     {
-        if (currentMatchedRecipe == null) return;
+        if (currentMatchedRecipe == null)
+        {
+            Debug.LogWarning("Craft called but no matched recipe");
+            return;
+        }
 
+        Debug.Log("Crafting: " + currentMatchedRecipe.result.itemName);
         Inventory.Instance.AddItem(currentMatchedRecipe.result);
 
         slotA.ClearSlot();

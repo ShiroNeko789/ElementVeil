@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 8301876813948436863}
   - component: {fileID: 985820668709831663}
   - component: {fileID: 3439604401463626016}
+  - component: {fileID: 5506050758793078877}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -64,11 +65,12 @@ Transform:
   m_GameObject: {fileID: 2916731383852160566}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.17, y: -3.02, z: 0}
+  m_LocalPosition: {x: -15.32, y: -5.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4688727810511704472}
+  - {fileID: 2709527976706850820}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7523635495117272515
@@ -114,7 +116,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1155257923993261161, guid: 31a939368c906154bafdf6cf5c1a20e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -237,7 +239,7 @@ MonoBehaviour:
   jumpForce: 16
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 136
   groundCheckDistance: 0.5
   joystick: {fileID: 0}
   useMobileControls: 1
@@ -259,6 +261,8 @@ MonoBehaviour:
   knockbackUpwardFactor: 4
   healthBarAnimator: {fileID: 0}
   playerSprite: {fileID: 7523635495117272515}
+  normalLayer: 0
+  invincibleLayer: 0
 --- !u!114 &985820668709831663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,6 +278,11 @@ MonoBehaviour:
   combatUIGroup: {fileID: 0}
   magnetUIGroup: {fileID: 0}
   polarityButtonImage: {fileID: 0}
+  northSprite: {fileID: 0}
+  southSprite: {fileID: 0}
+  switchButtonImage: {fileID: 0}
+  shootModeSprite: {fileID: 0}
+  magnetModeSprite: {fileID: 0}
   playerIsNorth: 1
   magnetModeActive: 0
 --- !u!114 &3439604401463626016
@@ -291,3 +300,53 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2804856316325341968, guid: 6def653905c08644a914b26a8dc85e50, type: 3}
   firePoint: {fileID: 4688727810511704472}
   shootCooldown: 0.5
+--- !u!114 &5506050758793078877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2916731383852160566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d81ce9a3c7c95c44905bc7ce9c59c62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedIcon: {fileID: 0}
+  emptySlotSprite: {fileID: 8417420941954122440, guid: 9b7198cd09e41364182e8790072e3262, type: 3}
+  selectorPanel: {fileID: 0}
+  itemContainer: {fileID: 0}
+  throwableButtonPrefab: {fileID: 3389588799024860343, guid: 4f4af78b78a7c864db6c111a1e5e6f16, type: 3}
+  throwButton: {fileID: 0}
+  throwOrigin: {fileID: 2709527976706850820}
+--- !u!1 &6223557988028209277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2709527976706850820}
+  m_Layer: 6
+  m_Name: ThrowOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2709527976706850820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6223557988028209277}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.98, y: 1.09, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7293219706496147670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

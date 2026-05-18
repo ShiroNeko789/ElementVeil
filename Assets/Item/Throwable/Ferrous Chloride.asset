@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37eeb4c93466d0a45be11f758655378c, type: 3}
+  m_Name: Ferrous Chloride
+  m_EditorClassIdentifier: 
+  itemName: Ferrous Chloride
+  icon: {fileID: -2765433732490330797, guid: 54d998e9ae1f8574680171c452078012, type: 3}
+  description: 
+  isStackable: 0
+  quantity: 1
+  projectilePrefab: {fileID: 584706435115809157, guid: 8f9f9d62fece81c4c9b6a43b361f2236, type: 3}
+  throwForce: 12
+  throwAngle: 35

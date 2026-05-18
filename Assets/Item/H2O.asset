@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: H2O
   m_EditorClassIdentifier: 
   itemName: H2O
-  icon: {fileID: 3499178861381643324, guid: f59d0b1665947104b8dc042b078b4eb3, type: 3}
+  icon: {fileID: 8360428864492835662, guid: 54d998e9ae1f8574680171c452078012, type: 3}
   description: It just water.
   isStackable: 0
   quantity: 1

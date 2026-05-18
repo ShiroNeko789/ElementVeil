@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37eeb4c93466d0a45be11f758655378c, type: 3}
+  m_Name: Explosive Item 1
+  m_EditorClassIdentifier: 
+  itemName: Explosive Item
+  icon: {fileID: -6080437216487095033, guid: 54d998e9ae1f8574680171c452078012, type: 3}
+  description: 
+  isStackable: 0
+  quantity: 1
+  projectilePrefab: {fileID: 7481178406455214897, guid: 1d194264a0dc8de42b075ad8add2eeab, type: 3}
+  throwForce: 12
+  throwAngle: 35
