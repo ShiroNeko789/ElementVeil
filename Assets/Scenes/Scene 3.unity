@@ -1152,7 +1152,7 @@ GameObject:
   - component: {fileID: 130328204}
   - component: {fileID: 130328203}
   m_Layer: 3
-  m_Name: Hot air balloon (no fire)_0
+  m_Name: HotAirBalloon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3504,7 +3504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &520319265
 RectTransform:
   m_ObjectHideFlags: 0
