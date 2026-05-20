@@ -1,46 +1,67 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class ExitWall : MonoBehaviour
 {
-    [Header("Settings")]
-    public float slideDistance = 5f;    // how far up it moves
-    public float slideDuration = 2f;    // how many seconds it takes
-    public string nextScene = "";       // optional: scene to load after
+    [Header("Boss")]
+    public GameObject boss;
 
+    [Header("Positions")]
+    public Transform closedPosition;
+    public Transform openPosition;
+
+    [Header("Slide Settings")]
+    public float slideDuration = 2f;
+
+    private IBoss trackedBoss;
     private bool isOpen = false;
 
-    // Called by MushroomBoss on death
-    public void OpenWall()
+    void Start()
     {
-        if (!isOpen)
+        if (closedPosition != null)
+            transform.position = closedPosition.position;
+
+        if (boss != null)
         {
-            isOpen = true;
-            StartCoroutine(SlideUp());
+            trackedBoss = boss.GetComponent<IBoss>();
+            if (trackedBoss == null)
+                Debug.LogWarning("[ExitWall] Assigned boss has no IBoss component.");
+        }
+        else
+        {
+            Debug.LogWarning("[ExitWall] No boss assigned in Inspector.");
         }
     }
 
-    IEnumerator SlideUp()
+    void Update()
     {
-        Vector3 startPos = transform.position;
-        Vector3 endPos = transform.position + new Vector3(0, slideDistance, 0);
+        if (isOpen || trackedBoss == null) return;
+        if (trackedBoss.IsDead()) OpenWall();
+    }
 
+    void OpenWall()
+    {
+        if (isOpen) return;
+        isOpen = true;
+        StartCoroutine(SlideToOpen());
+    }
+
+    IEnumerator SlideToOpen()
+    {
+        if (openPosition == null) yield break;
+
+        Vector3 startPos = transform.position;
+        Vector3 endPos = openPosition.position;
         float elapsed = 0f;
+
         while (elapsed < slideDuration)
         {
             elapsed += Time.deltaTime;
-            float t = Mathf.SmoothStep(0f, 1f, elapsed / slideDuration); // smooth ease in/out
+            float t = Mathf.SmoothStep(0f, 1f, elapsed / slideDuration);
             transform.position = Vector3.Lerp(startPos, endPos, t);
             yield return null;
         }
 
         transform.position = endPos;
-
-        // Optional: load next scene after wall fully opens
-        if (!string.IsNullOrEmpty(nextScene))
-        {
-            yield return new WaitForSeconds(1f);
-            UnityEngine.SceneManagement.SceneManager.LoadScene(nextScene);
-        }
     }
 }

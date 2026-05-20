@@ -1,0 +1,1900 @@
+fileFormatVersion: 2
+guid: b23991277e095c145a7d3487045c3264
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4895246013469654181
+    second: WindBlowAnimate_0
+  - first:
+      213: -8819769757772609504
+    second: WindBlowAnimate_1
+  - first:
+      213: 2666106410191395636
+    second: WindBlowAnimate_2
+  - first:
+      213: -881970425892915737
+    second: WindBlowAnimate_3
+  - first:
+      213: 4969358435546625987
+    second: WindBlowAnimate_4
+  - first:
+      213: -2087393571864504043
+    second: WindBlowAnimate_5
+  - first:
+      213: 3148592505770146177
+    second: WindBlowAnimate_6
+  - first:
+      213: 3174771392850410044
+    second: WindBlowAnimate_7
+  - first:
+      213: -6727594191156546097
+    second: WindBlowAnimate_8
+  - first:
+      213: 8146379360191354842
+    second: WindBlowAnimate_9
+  - first:
+      213: 2057809051014335912
+    second: WindBlowAnimate_10
+  - first:
+      213: 2799818431710775642
+    second: WindBlowAnimate_11
+  - first:
+      213: -3549642970291045096
+    second: WindBlowAnimate_12
+  - first:
+      213: 7576691036339132208
+    second: WindBlowAnimate_13
+  - first:
+      213: -1573160935012397811
+    second: WindBlowAnimate_14
+  - first:
+      213: -3536504678167360949
+    second: WindBlowAnimate_15
+  - first:
+      213: -6675903736204618779
+    second: WindBlowAnimate_16
+  - first:
+      213: -6010819615256043389
+    second: WindBlowAnimate_17
+  - first:
+      213: -2986961290260921684
+    second: WindBlowAnimate_18
+  - first:
+      213: -7600958950453795267
+    second: WindBlowAnimate_19
+  - first:
+      213: -6987775175329982734
+    second: WindBlowAnimate_20
+  - first:
+      213: 4880469830352151794
+    second: WindBlowAnimate_21
+  - first:
+      213: 2420631150454001865
+    second: WindBlowAnimate_22
+  - first:
+      213: -1886355849992594892
+    second: WindBlowAnimate_23
+  - first:
+      213: 2365597404203950364
+    second: WindBlowAnimate_24
+  - first:
+      213: 9184674566781393658
+    second: WindBlowAnimate_25
+  - first:
+      213: 7830774570834032598
+    second: WindBlowAnimate_26
+  - first:
+      213: -2791548920918018155
+    second: WindBlowAnimate_27
+  - first:
+      213: -987232702157660987
+    second: WindBlowAnimate_28
+  - first:
+      213: -2785171597395250781
+    second: WindBlowAnimate_29
+  - first:
+      213: 6228855865184252985
+    second: WindBlowAnimate_30
+  - first:
+      213: 5380464524450208407
+    second: WindBlowAnimate_31
+  - first:
+      213: -7125796432259866403
+    second: WindBlowAnimate_32
+  - first:
+      213: -1302607076792750053
+    second: WindBlowAnimate_33
+  - first:
+      213: -4570765394422229952
+    second: WindBlowAnimate_34
+  - first:
+      213: 4922169272587773827
+    second: WindBlowAnimate_35
+  - first:
+      213: -8391282808707649830
+    second: WindBlowAnimate_36
+  - first:
+      213: 982592764732499015
+    second: WindBlowAnimate_37
+  - first:
+      213: 797294623878320440
+    second: WindBlowAnimate_38
+  - first:
+      213: -8029762631892715481
+    second: WindBlowAnimate_39
+  - first:
+      213: 488633034419615841
+    second: WindBlowAnimate_40
+  - first:
+      213: 2129472088488533986
+    second: WindBlowAnimate_41
+  - first:
+      213: 8880395485658807859
+    second: WindBlowAnimate_42
+  - first:
+      213: -1555153001554548201
+    second: WindBlowAnimate_43
+  - first:
+      213: 751626602935198450
+    second: WindBlowAnimate_44
+  - first:
+      213: 5443642000303015498
+    second: WindBlowAnimate_45
+  - first:
+      213: 685850834947101112
+    second: WindBlowAnimate_46
+  - first:
+      213: -1313870389320510710
+    second: WindBlowAnimate_47
+  - first:
+      213: 2924052380110491410
+    second: WindBlowAnimate_48
+  - first:
+      213: 8276629206602561902
+    second: WindBlowAnimate_49
+  - first:
+      213: -8528689854790460932
+    second: WindBlowAnimate_50
+  - first:
+      213: -1556580653382660415
+    second: WindBlowAnimate_51
+  - first:
+      213: 4450163119759840598
+    second: WindBlowAnimate_52
+  - first:
+      213: -8395450138521092208
+    second: WindBlowAnimate_53
+  - first:
+      213: -2697297177751551128
+    second: WindBlowAnimate_54
+  - first:
+      213: -500106359650921542
+    second: WindBlowAnimate_55
+  - first:
+      213: -8271034684283431980
+    second: WindBlowAnimate_56
+  - first:
+      213: -1567521618680154683
+    second: WindBlowAnimate_57
+  - first:
+      213: -3369108153713471932
+    second: WindBlowAnimate_58
+  - first:
+      213: -6633680290474535072
+    second: WindBlowAnimate_59
+  - first:
+      213: -3404686434262641343
+    second: WindBlowAnimate_60
+  - first:
+      213: -2024988668383167161
+    second: WindBlowAnimate_61
+  - first:
+      213: 224009619181400901
+    second: WindBlowAnimate_62
+  - first:
+      213: -167337215230467539
+    second: WindBlowAnimate_63
+  - first:
+      213: 6217805816252617164
+    second: WindBlowAnimate_64
+  - first:
+      213: -4337697326614877738
+    second: WindBlowAnimate_65
+  - first:
+      213: -8765757818691652541
+    second: WindBlowAnimate_66
+  - first:
+      213: -9204109130431628418
+    second: WindBlowAnimate_67
+  - first:
+      213: -2449256636895403715
+    second: WindBlowAnimate_68
+  - first:
+      213: -1156639202625950746
+    second: WindBlowAnimate_69
+  - first:
+      213: 7451007388843994942
+    second: WindBlowAnimate_70
+  - first:
+      213: 9074749750356665611
+    second: WindBlowAnimate_71
+  - first:
+      213: -5274562988500183649
+    second: WindBlowAnimate_72
+  - first:
+      213: -46340428850253262
+    second: WindBlowAnimate_73
+  - first:
+      213: -2306483608141275940
+    second: WindBlowAnimate_74
+  - first:
+      213: -9113785281061060684
+    second: WindBlowAnimate_75
+  - first:
+      213: -6954425289165661465
+    second: WindBlowAnimate_76
+  - first:
+      213: -3630605019031016250
+    second: WindBlowAnimate_77
+  - first:
+      213: 1752298274142066105
+    second: WindBlowAnimate_78
+  - first:
+      213: -650901422851630050
+    second: WindBlowAnimate_79
+  - first:
+      213: 910063820495845585
+    second: WindBlowAnimate_80
+  - first:
+      213: 8409635344056308656
+    second: WindBlowAnimate_81
+  - first:
+      213: 3567128240834062716
+    second: WindBlowAnimate_82
+  - first:
+      213: -7634356406599556254
+    second: WindBlowAnimate_83
+  - first:
+      213: 5751097143805406977
+    second: WindBlowAnimate_84
+  - first:
+      213: -1569714339164004861
+    second: WindBlowAnimate_85
+  - first:
+      213: -4504548196371335063
+    second: WindBlowAnimate_86
+  - first:
+      213: 5604523008252408619
+    second: WindBlowAnimate_87
+  - first:
+      213: 1817100099943883717
+    second: WindBlowAnimate_88
+  - first:
+      213: 8549233656209276958
+    second: WindBlowAnimate_89
+  - first:
+      213: -93159487061026485
+    second: WindBlowAnimate_90
+  - first:
+      213: 1834821729307421329
+    second: WindBlowAnimate_91
+  - first:
+      213: -1265476359267024413
+    second: WindBlowAnimate_92
+  - first:
+      213: 5665724364872289233
+    second: WindBlowAnimate_93
+  - first:
+      213: -919623572139149730
+    second: WindBlowAnimate_94
+  - first:
+      213: 5846887009127955907
+    second: WindBlowAnimate_95
+  - first:
+      213: 2762509520090403079
+    second: WindBlowAnimate_96
+  - first:
+      213: -2104105866859951272
+    second: WindBlowAnimate_97
+  - first:
+      213: -5788866102371755055
+    second: WindBlowAnimate_98
+  - first:
+      213: 7852691020066468464
+    second: WindBlowAnimate_99
+  - first:
+      213: -8254521721632369952
+    second: WindBlowAnimate_100
+  - first:
+      213: -350358632385201817
+    second: WindBlowAnimate_101
+  - first:
+      213: 2361325481605591114
+    second: WindBlowAnimate_102
+  - first:
+      213: 7244551901584304092
+    second: WindBlowAnimate_103
+  - first:
+      213: -7463690943394257410
+    second: WindBlowAnimate_104
+  - first:
+      213: -2772238433619895687
+    second: WindBlowAnimate_105
+  - first:
+      213: -320664732418174774
+    second: WindBlowAnimate_106
+  - first:
+      213: -7703498697619696603
+    second: WindBlowAnimate_107
+  - first:
+      213: 233849870126762467
+    second: WindBlowAnimate_108
+  - first:
+      213: 7047111632355801194
+    second: WindBlowAnimate_109
+  - first:
+      213: 8087251213191845358
+    second: WindBlowAnimate_110
+  - first:
+      213: -4256233042712088354
+    second: WindBlowAnimate_111
+  - first:
+      213: 2723061694742264143
+    second: WindBlowAnimate_112
+  - first:
+      213: -6377350854722230079
+    second: WindBlowAnimate_113
+  - first:
+      213: -2901625754123264616
+    second: WindBlowAnimate_114
+  - first:
+      213: 2698417119937150043
+    second: WindBlowAnimate_115
+  - first:
+      213: 2381870605248135798
+    second: WindBlowAnimate_116
+  - first:
+      213: -4370698399024801514
+    second: WindBlowAnimate_117
+  - first:
+      213: -239265343502012421
+    second: WindBlowAnimate_118
+  - first:
+      213: -1863979128064131588
+    second: WindBlowAnimate_119
+  - first:
+      213: -8217103980631289313
+    second: WindBlowAnimate_120
+  - first:
+      213: 1430051894022159198
+    second: WindBlowAnimate_121
+  - first:
+      213: 3746556476648658595
+    second: WindBlowAnimate_122
+  - first:
+      213: 6314143538182616853
+    second: WindBlowAnimate_123
+  - first:
+      213: -6903094054781357769
+    second: WindBlowAnimate_124
+  - first:
+      213: -4317147854809331887
+    second: WindBlowAnimate_125
+  - first:
+      213: -9111528120405118751
+    second: WindBlowAnimate_126
+  - first:
+      213: 2171110733275080690
+    second: WindBlowAnimate_127
+  - first:
+      213: -1863078595012111047
+    second: WindBlowAnimate_128
+  - first:
+      213: -98206322947585401
+    second: WindBlowAnimate_129
+  - first:
+      213: 8956679563166167179
+    second: WindBlowAnimate_130
+  - first:
+      213: -5139074917141193455
+    second: WindBlowAnimate_131
+  - first:
+      213: 8176641357365821853
+    second: WindBlowAnimate_132
+  - first:
+      213: 4955029782167414717
+    second: WindBlowAnimate_133
+  - first:
+      213: 2266649767270449432
+    second: WindBlowAnimate_134
+  - first:
+      213: -7056840254319974632
+    second: WindBlowAnimate_135
+  - first:
+      213: 1278570981777197368
+    second: WindBlowAnimate_136
+  - first:
+      213: -450874937864820253
+    second: WindBlowAnimate_137
+  - first:
+      213: -7536724689939208314
+    second: WindBlowAnimate_138
+  - first:
+      213: 7369345694193682994
+    second: WindBlowAnimate_139
+  - first:
+      213: -6435210612732224608
+    second: WindBlowAnimate_140
+  - first:
+      213: -5437012173106091143
+    second: WindBlowAnimate_141
+  - first:
+      213: 318179052786956223
+    second: WindBlowAnimate_142
+  - first:
+      213: 2782631566114227062
+    second: WindBlowAnimate_143
+  - first:
+      213: -7972967345505612195
+    second: WindBlowAnimate_144
+  - first:
+      213: -9011791091182318664
+    second: WindBlowAnimate_145
+  - first:
+      213: -3691012755414435714
+    second: WindBlowAnimate_146
+  - first:
+      213: 4335257905335608855
+    second: WindBlowAnimate_147
+  - first:
+      213: -8915230239336104992
+    second: WindBlowAnimate_148
+  - first:
+      213: 8615516901399454150
+    second: WindBlowAnimate_149
+  - first:
+      213: -7986608165446849844
+    second: WindBlowAnimate_150
+  - first:
+      213: 5714047396532173810
+    second: WindBlowAnimate_151
+  - first:
+      213: 5929353440520805753
+    second: WindBlowAnimate_152
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WindBlowAnimate_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1897
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b538ef6dfa7901cb0800000000000000
+      internalID: -4895246013469654181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_1
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1897
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0280b3b6222e99580800000000000000
+      internalID: -8819769757772609504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_2
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1897
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43b99d887a9eff420800000000000000
+      internalID: 2666106410191395636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_3
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1897
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e5b04e029c92c3f0800000000000000
+      internalID: -881970425892915737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_4
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 1897
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c7f8581b25b6f440800000000000000
+      internalID: 4969358435546625987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_5
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 1897
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519159a1b961803e0800000000000000
+      internalID: -2087393571864504043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_6
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 1897
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 189f2e8b33c02bb20800000000000000
+      internalID: 3148592505770146177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_7
+      rect:
+        serializedVersion: 2
+        x: 3472
+        y: 1897
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3abbe9d2cd0f0c20800000000000000
+      internalID: 3174771392850410044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1626
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc5f12b3ab8c2a2a0800000000000000
+      internalID: -6727594191156546097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_9
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1626
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad797c1edd0cd0170800000000000000
+      internalID: 8146379360191354842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_10
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1626
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ad0b4ddd6ece8c10800000000000000
+      internalID: 2057809051014335912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_11
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1626
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5946b19704fad620800000000000000
+      internalID: 2799818431710775642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_12
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 1626
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81df65c76822dbec0800000000000000
+      internalID: -3549642970291045096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_13
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 1626
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03751e1ca50d52960800000000000000
+      internalID: 7576691036339132208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_14
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 1626
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0d801ee6720b2ae0800000000000000
+      internalID: -1573160935012397811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_15
+      rect:
+        serializedVersion: 2
+        x: 3472
+        y: 1626
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ac35f7bbfcbeec0800000000000000
+      internalID: -3536504678167360949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1355
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e312d02cec6a53a0800000000000000
+      internalID: -6675903736204618779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_17
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1355
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 380a6b71867459ca0800000000000000
+      internalID: -6010819615256043389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_18
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1355
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca2c728388e2c86d0800000000000000
+      internalID: -2986961290260921684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_19
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1355
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3620ed2b18f38690800000000000000
+      internalID: -7600958950453795267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_20
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 1355
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f6d928308f660f90800000000000000
+      internalID: -6987775175329982734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_21
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 1355
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4a62fe379eab340800000000000000
+      internalID: 4880469830352151794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_22
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 1355
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c05e0fc43fc79120800000000000000
+      internalID: 2420631150454001865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_23
+      rect:
+        serializedVersion: 2
+        x: 3472
+        y: 1355
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a1639495152d5e0800000000000000
+      internalID: -1886355849992594892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1084
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c11a92f3e4a44d020800000000000000
+      internalID: 2365597404203950364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_25
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1084
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afad1922bd4867f70800000000000000
+      internalID: 9184674566781393658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_26
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1084
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d779b2abff7cac60800000000000000
+      internalID: 7830774570834032598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_27
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1084
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5977e83fb0d6249d0800000000000000
+      internalID: -2791548920918018155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_28
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 1084
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc5e358615ac42f0800000000000000
+      internalID: -987232702157660987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_29
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 1084
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a1bfba40351959d0800000000000000
+      internalID: -2785171597395250781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_30
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 1084
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9347a615867517650800000000000000
+      internalID: 6228855865184252985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_31
+      rect:
+        serializedVersion: 2
+        x: 3472
+        y: 1084
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a12726aff3baa40800000000000000
+      internalID: 5380464524450208407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 813
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd0a76126e51c1d90800000000000000
+      internalID: -7125796432259866403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_33
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 813
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b10bbd1e3c53cede0800000000000000
+      internalID: -1302607076792750053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_34
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 813
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04490d937116190c0800000000000000
+      internalID: -4570765394422229952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_35
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 813
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 387efe8efde0f4440800000000000000
+      internalID: 4922169272587773827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_36
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 813
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade63219ebc2c8b80800000000000000
+      internalID: -8391282808707649830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_37
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 813
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 744efbcd9eed2ad00800000000000000
+      internalID: 982592764732499015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_38
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 813
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83198957c3f801b00800000000000000
+      internalID: 797294623878320440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_39
+      rect:
+        serializedVersion: 2
+        x: 3472
+        y: 813
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72834570e6d809090800000000000000
+      internalID: -8029762631892715481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 542
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1683a1ae729f7c600800000000000000
+      internalID: 488633034419615841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_41
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 542
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2efd77105976d8d10800000000000000
+      internalID: 2129472088488533986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_42
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 542
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33efca3d4a08d3b70800000000000000
+      internalID: 8880395485658807859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_43
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 542
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71a65faa59cfa6ae0800000000000000
+      internalID: -1555153001554548201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_44
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 542
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f2afafb9605e6a00800000000000000
+      internalID: 751626602935198450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_45
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 542
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a464570ce83bb8b40800000000000000
+      internalID: 5443642000303015498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_46
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 542
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b15de953b1a48900800000000000000
+      internalID: 685850834947101112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_47
+      rect:
+        serializedVersion: 2
+        x: 3472
+        y: 542
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0395a397d134cde0800000000000000
+      internalID: -1313870389320510710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 271
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21f0f1db522549820800000000000000
+      internalID: 2924052380110491410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_49
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 271
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e693b25796e7cd270800000000000000
+      internalID: 8276629206602561902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_50
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 271
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf99cb593c104a980800000000000000
+      internalID: -8528689854790460932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_51
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 271
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ce81e2942ae56ae0800000000000000
+      internalID: -1556580653382660415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_52
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 271
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65554d987c722cd30800000000000000
+      internalID: 4450163119759840598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_53
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 271
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f32fb749e5d7b80800000000000000
+      internalID: -8395450138521092208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_54
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 271
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863847af186419ad0800000000000000
+      internalID: -2697297177751551128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_55
+      rect:
+        serializedVersion: 2
+        x: 3472
+        y: 271
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab3d7136ae34f09f0800000000000000
+      internalID: -500106359650921542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindBlowAnimate_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 496
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d3d956c6c1673d80800000000000000
+      internalID: -8271034684283431980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f5ccd989a25f7c14fb21b58f1c6e5dec
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WindBlowAnimate_0: -4895246013469654181
+      WindBlowAnimate_1: -8819769757772609504
+      WindBlowAnimate_10: 2057809051014335912
+      WindBlowAnimate_11: 2799818431710775642
+      WindBlowAnimate_12: -3549642970291045096
+      WindBlowAnimate_13: 7576691036339132208
+      WindBlowAnimate_14: -1573160935012397811
+      WindBlowAnimate_15: -3536504678167360949
+      WindBlowAnimate_16: -6675903736204618779
+      WindBlowAnimate_17: -6010819615256043389
+      WindBlowAnimate_18: -2986961290260921684
+      WindBlowAnimate_19: -7600958950453795267
+      WindBlowAnimate_2: 2666106410191395636
+      WindBlowAnimate_20: -6987775175329982734
+      WindBlowAnimate_21: 4880469830352151794
+      WindBlowAnimate_22: 2420631150454001865
+      WindBlowAnimate_23: -1886355849992594892
+      WindBlowAnimate_24: 2365597404203950364
+      WindBlowAnimate_25: 9184674566781393658
+      WindBlowAnimate_26: 7830774570834032598
+      WindBlowAnimate_27: -2791548920918018155
+      WindBlowAnimate_28: -987232702157660987
+      WindBlowAnimate_29: -2785171597395250781
+      WindBlowAnimate_3: -881970425892915737
+      WindBlowAnimate_30: 6228855865184252985
+      WindBlowAnimate_31: 5380464524450208407
+      WindBlowAnimate_32: -7125796432259866403
+      WindBlowAnimate_33: -1302607076792750053
+      WindBlowAnimate_34: -4570765394422229952
+      WindBlowAnimate_35: 4922169272587773827
+      WindBlowAnimate_36: -8391282808707649830
+      WindBlowAnimate_37: 982592764732499015
+      WindBlowAnimate_38: 797294623878320440
+      WindBlowAnimate_39: -8029762631892715481
+      WindBlowAnimate_4: 4969358435546625987
+      WindBlowAnimate_40: 488633034419615841
+      WindBlowAnimate_41: 2129472088488533986
+      WindBlowAnimate_42: 8880395485658807859
+      WindBlowAnimate_43: -1555153001554548201
+      WindBlowAnimate_44: 751626602935198450
+      WindBlowAnimate_45: 5443642000303015498
+      WindBlowAnimate_46: 685850834947101112
+      WindBlowAnimate_47: -1313870389320510710
+      WindBlowAnimate_48: 2924052380110491410
+      WindBlowAnimate_49: 8276629206602561902
+      WindBlowAnimate_5: -2087393571864504043
+      WindBlowAnimate_50: -8528689854790460932
+      WindBlowAnimate_51: -1556580653382660415
+      WindBlowAnimate_52: 4450163119759840598
+      WindBlowAnimate_53: -8395450138521092208
+      WindBlowAnimate_54: -2697297177751551128
+      WindBlowAnimate_55: -500106359650921542
+      WindBlowAnimate_56: -8271034684283431980
+      WindBlowAnimate_6: 3148592505770146177
+      WindBlowAnimate_7: 3174771392850410044
+      WindBlowAnimate_8: -6727594191156546097
+      WindBlowAnimate_9: 8146379360191354842
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

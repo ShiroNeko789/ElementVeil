@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
@@ -20,33 +20,18 @@ public class GameSaveManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
 
-    void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
+    void OnEnable() { SceneManager.sceneLoaded += OnSceneLoaded; }
+    void OnDisable() { SceneManager.sceneLoaded -= OnSceneLoaded; }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Always reset timescale on any scene load
         Time.timeScale = 1f;
-
         if (scene.name == "MainMenu") return;
-
-        // Re-find all scene references fresh
         StartCoroutine(InitSceneReferences());
     }
 
@@ -59,10 +44,7 @@ public class GameSaveManager : MonoBehaviour
         if (player == null) { Debug.LogError("Player not found in scene"); yield break; }
         playerTransform = player.transform;
         playerHealth = player.GetComponent<PlayerHealth>();
-
         boss = FindObjectOfType<MushroomBoss>();
-
-        Debug.Log("Scene refs found. Items currently in inventory: " + Inventory.Instance?.items.Count);
 
         int shouldLoad = PlayerPrefs.GetInt("ShouldLoadSave", 0);
         int isNewGame = PlayerPrefs.GetInt("IsNewGame", 0);
@@ -79,16 +61,40 @@ public class GameSaveManager : MonoBehaviour
             PlayerPrefs.Save();
             NewGame();
         }
-        // If neither flag is set, do nothing � keep inventory as is
+        // If neither flag is set: health is carried by PlayerHealth.Start()
+        // reading the CarriedHealth PlayerPrefs key — no action needed here.
     }
 
+    // ── Scene Transition ──────────────────────────────────────────────────
+    /// <summary>
+    /// Call this instead of SceneManager.LoadScene() whenever moving the
+    /// player to a new scene mid-game (e.g. after boss defeated, portal, etc.).
+    /// It saves the current health so PlayerHealth.Start() can restore it.
+    /// </summary>
+    public void LoadSceneKeepHealth(string sceneName)
+    {
+        // Write health to PlayerPrefs before scene unloads
+        if (playerHealth != null)
+            playerHealth.SaveHealthForTransition();
+
+        SceneManager.LoadScene(sceneName);
+    }
+
+    /// <summary>Convenience overload using the configured gameSceneName.</summary>
+    public void LoadNextScene() => LoadSceneKeepHealth(gameSceneName);
+
+    // ── New Game ──────────────────────────────────────────────────────────
     void NewGame()
     {
+        // Clear carry key so PlayerHealth starts at max
+        PlayerPrefs.DeleteKey("CarriedHealth");
+        PlayerPrefs.Save();
+
         collectedPickups.Clear();
         if (Inventory.Instance != null)
         {
             Inventory.Instance.items.Clear();
-            Debug.Log("New game � inventory cleared");
+            Debug.Log("New game — inventory cleared");
         }
         if (playerHealth != null)
         {
@@ -97,6 +103,7 @@ public class GameSaveManager : MonoBehaviour
         }
     }
 
+    // ── Save / Load ───────────────────────────────────────────────────────
     public void SaveGame()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -105,8 +112,6 @@ public class GameSaveManager : MonoBehaviour
         playerHealth = player.GetComponent<PlayerHealth>();
 
         if (Inventory.Instance == null) { Debug.LogError("SaveGame: Inventory.Instance is null"); return; }
-
-        Debug.Log("SaveGame called � item count: " + Inventory.Instance.items.Count);
 
         SaveData data = new SaveData();
         data.playerX = playerTransform.position.x;
@@ -117,27 +122,21 @@ public class GameSaveManager : MonoBehaviour
         foreach (Item item in Inventory.Instance.items)
         {
             int idx = System.Array.IndexOf(allItemsInGame, item);
-            if (idx >= 0)
-            {
-                indexes.Add(idx);
-                Debug.Log("Saving item index: " + idx + " = " + item.itemName);
-            }
-            else
-                Debug.LogWarning("Item not found in allItemsInGame: " + item.itemName);
+            if (idx >= 0) indexes.Add(idx);
+            else Debug.LogWarning("Item not found in allItemsInGame: " + item.itemName);
         }
         data.inventoryItemIndexes = indexes.ToArray();
         data.collectedPickups = collectedPickups.ToArray();
         data.bossDefeated = boss != null && boss.IsDead();
 
         SaveSystem.Save(data);
-        Debug.Log("Save complete � " + indexes.Count + " items saved");
+        Debug.Log("Save complete — " + indexes.Count + " items saved");
     }
 
     public void LoadGame()
     {
         SaveData data = SaveSystem.Load();
         if (data == null) { Debug.LogError("LoadGame: no save data found"); return; }
-        Debug.Log("Save has indexes count: " + data.inventoryItemIndexes.Length + " | allItemsInGame count: " + allItemsInGame.Length);
 
         // Position
         Rigidbody2D rb = playerTransform.GetComponent<Rigidbody2D>();
@@ -145,20 +144,16 @@ public class GameSaveManager : MonoBehaviour
         playerTransform.position = new Vector3(data.playerX, data.playerY, 0f);
         if (rb != null) rb.simulated = true;
 
-        // Health
+        // Health — set directly (no carry key needed for a full load)
         playerHealth.currentHealth = data.playerHealth;
         playerHealth.UpdateUIPublic();
 
-        // Load inventory by index
+        // Inventory
         Inventory.Instance.items.Clear();
-        Debug.Log("Loading " + data.inventoryItemIndexes.Length + " items");
         foreach (int idx in data.inventoryItemIndexes)
         {
             if (idx >= 0 && idx < allItemsInGame.Length)
-            {
                 Inventory.Instance.items.Add(allItemsInGame[idx]);
-                Debug.Log("Loaded item: " + allItemsInGame[idx].itemName);
-            }
             else
                 Debug.LogWarning("Invalid item index: " + idx);
         }
@@ -179,7 +174,7 @@ public class GameSaveManager : MonoBehaviour
         if (data.bossDefeated && boss != null)
             boss.gameObject.SetActive(false);
 
-        Debug.Log("Load complete. Items in inventory: " + Inventory.Instance.items.Count);
+        Debug.Log("Load complete. Items: " + Inventory.Instance.items.Count);
     }
 
     public void RegisterCollectedPickup(string pickupName)
@@ -188,25 +183,11 @@ public class GameSaveManager : MonoBehaviour
             collectedPickups.Add(pickupName);
     }
 
-    public void DebugSaveState()
-    {
-        Debug.Log("=== SAVE DEBUG ===");
-        Debug.Log("Inventory.Instance is null: " + (Inventory.Instance == null));
-        Debug.Log("Inventory instance ID: " + Inventory.Instance?.GetInstanceID());
-        Debug.Log("Item count: " + Inventory.Instance?.items.Count);
-        if (Inventory.Instance != null)
-            foreach (Item item in Inventory.Instance.items)
-                Debug.Log("  Item: " + item.itemName);
-        Debug.Log("playerTransform null: " + (playerTransform == null));
-        Debug.Log("=================");
-    }
-
     public static GameSaveManager Get()
     {
         if (Instance != null) return Instance;
         Instance = FindObjectOfType<GameSaveManager>();
-        if (Instance == null)
-            Debug.LogError("GameSaveManager not found in scene");
+        if (Instance == null) Debug.LogError("GameSaveManager not found in scene");
         return Instance;
     }
 }

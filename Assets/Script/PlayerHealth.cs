@@ -21,14 +21,48 @@ public class PlayerHealth : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    // Key used to carry health across scenes
+    private const string HealthCarryKey = "CarriedHealth";
+
     void Start()
     {
-        currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         normalLayer = LayerMask.NameToLayer("Player");
         invincibleLayer = LayerMask.NameToLayer("PlayerInvincible");
+
+        // ── Restore carried health if GameSaveManager passed one ──────────
+        // GameSaveManager.SaveHealthForSceneTransition() writes this key
+        // before loading the next scene. We read it once and delete it so
+        // a future fresh start doesn't accidentally reuse it.
+        if (PlayerPrefs.HasKey(HealthCarryKey))
+        {
+            currentHealth = PlayerPrefs.GetInt(HealthCarryKey);
+            currentHealth = Mathf.Clamp(currentHealth, 1, maxHealth); // never arrive dead
+            PlayerPrefs.DeleteKey(HealthCarryKey);
+            PlayerPrefs.Save();
+            Debug.Log("[PlayerHealth] Restored carried health: " + currentHealth);
+        }
+        else
+        {
+            // No carry key → brand-new game or explicit new-game reset
+            currentHealth = maxHealth;
+            Debug.Log("[PlayerHealth] No carry key — starting at max health: " + currentHealth);
+        }
+
         UpdateUI();
     }
+
+    // ── Called by GameSaveManager just before loading a new scene ─────────
+    public void SaveHealthForTransition()
+    {
+        PlayerPrefs.SetInt(HealthCarryKey, currentHealth);
+        PlayerPrefs.Save();
+        Debug.Log("[PlayerHealth] Saved health for transition: " + currentHealth);
+    }
+
+    // ─────────────────────────────────────────────────────────────────────
+    //  Everything below is unchanged from your original
+    // ─────────────────────────────────────────────────────────────────────
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -52,13 +86,11 @@ public class PlayerHealth : MonoBehaviour
         {
             StopCoroutine("ApplyKnockback");
             StartCoroutine(ApplyKnockback(enemyPosition));
-            // Only start iframes if not poisoned — poison handles its own visuals
             if (!isPoisoned)
                 StartCoroutine(IFrames());
         }
     }
 
-    // Poison damage bypasses iframes
     public void TakePoisonDamage(int damage)
     {
         if (currentHealth <= 0) return;
@@ -66,9 +98,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Max(currentHealth, 0);
         UpdateUI();
         Debug.Log("Poison damage: " + damage + " | Health: " + currentHealth);
-
-        if (currentHealth <= 0)
-            gameObject.SetActive(false);
+        if (currentHealth <= 0) gameObject.SetActive(false);
     }
 
     private IEnumerator ApplyKnockback(Vector2 enemyPos)
@@ -126,5 +156,26 @@ public class PlayerHealth : MonoBehaviour
         playerSprite.color = Color.green;
         yield return new WaitForSeconds(0.3f);
         playerSprite.color = Color.white;
+    }
+
+    public void TakeLightningDamage(int damage)
+    {
+        if (currentHealth <= 0) return;
+        currentHealth -= damage;
+        currentHealth = Mathf.Max(currentHealth, 0);
+        UpdateUI();
+        StartCoroutine(LightningFlash());
+        Debug.Log("Lightning damage: " + damage + " | Health: " + currentHealth);
+        if (currentHealth <= 0) gameObject.SetActive(false);
+    }
+
+    IEnumerator LightningFlash()
+    {
+        if (playerSprite != null)
+        {
+            playerSprite.color = new Color(1f, 1f, 0f, 1f);
+            yield return new WaitForSeconds(0.1f);
+            if (!isPoisoned) playerSprite.color = Color.white;
+        }
     }
 }

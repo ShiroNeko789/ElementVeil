@@ -20,6 +20,9 @@ public class InventoryUI : MonoBehaviour
     [Header("Item Slot")]
     public Image slotIconTemplate;
 
+    [Header("Equipment Slots")]
+    public EquipmentSlot[] equipmentSlots;
+
     private List<GameObject> spawnedSlots = new List<GameObject>();
 
     void Start()

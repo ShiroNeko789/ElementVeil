@@ -49,6 +49,9 @@ GameObject:
   - component: {fileID: 985820668709831663}
   - component: {fileID: 3439604401463626016}
   - component: {fileID: 5506050758793078877}
+  - component: {fileID: -4330321585932344155}
+  - component: {fileID: 7672905913369082424}
+  - component: {fileID: 2022235151276271879}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -318,7 +321,59 @@ MonoBehaviour:
   itemContainer: {fileID: 0}
   throwableButtonPrefab: {fileID: 3389588799024860343, guid: 4f4af78b78a7c864db6c111a1e5e6f16, type: 3}
   throwButton: {fileID: 0}
+  throwCooldown: 1
+  throwButtonCooldownFill: {fileID: 0}
   throwOrigin: {fileID: 2709527976706850820}
+--- !u!114 &-4330321585932344155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2916731383852160566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1550a19efc8c64344a67a58dba94ce87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootButton: {fileID: 0}
+  shootButtonImage: {fileID: 0}
+  shootSprite: {fileID: 0}
+  interactSprite: {fileID: 0}
+--- !u!114 &7672905913369082424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2916731383852160566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a32514f1b21a23409547841a4907b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2022235151276271879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2916731383852160566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba8710f0fc075e42a6c103481d1aa92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gloveButton: {fileID: 0}
+  gloveButtonImage: {fileID: 0}
+  gloveActiveIndicator: {fileID: 0}
+  gloveEquippedSprite: {fileID: 0}
+  gloveUnequippedSprite: {fileID: 0}
+  magnetSwitchButton: {fileID: 0}
+  magnetSwitchIcon: {fileID: 0}
+  magnetModeSprite: {fileID: 0}
+  gloveModeSprite: {fileID: 0}
+  gloveActiveDuration: -1
 --- !u!1 &6223557988028209277
 GameObject:
   m_ObjectHideFlags: 0

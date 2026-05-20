@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48267f7e6e6284c479a7c7f84b056883, type: 3}
+  m_Name: ExplosiveItem
+  m_EditorClassIdentifier: 
+  recipeName: 
+  ingredients:
+  - item: {fileID: 11400000, guid: aac0005716058844ea0010fe6d11c7aa, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: eb38f8d8ea6690e40aa3fea2a0911d3e, type: 2}
+    amount: 0
+  result: {fileID: 11400000, guid: fbf23a899b004d04bb3ec6e12630340b, type: 2}
+  resultQuantity: 1

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class MushroomBoss : MonoBehaviour
+public class MushroomBoss : MonoBehaviour, IBoss
 {
     [Header("Health & Visuals")]
     public float maxHealth = 30f;

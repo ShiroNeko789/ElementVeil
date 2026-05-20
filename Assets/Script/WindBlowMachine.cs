@@ -2,7 +2,6 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 
 public class WindBlowMachine : MonoBehaviour
 {
@@ -19,17 +18,17 @@ public class WindBlowMachine : MonoBehaviour
     public Sprite emptySlotSprite;
     public GameObject activatedVFX;
 
-    [Header("UI — Item Slot (drag target)")]
-    public WindMachineSlot itemSlot;           // The single drop slot on the panel
+    [Header("UI — Item Slot")]
+    public WindMachineSlot itemSlot;
 
-    [Header("UI — Inventory Grid (like Workbench)")]
-    public Transform itemGridContent;          // ScrollView Content transform
-    public GameObject itemSlotPrefab;          // Same prefab you use in WorkbenchUI
+    [Header("UI — Inventory Grid")]
+    public Transform itemGridContent;
+    public GameObject itemSlotPrefab;
 
     [Header("Animator")]
     public Animator machineAnimator;
 
-    [Header("Wind Zone (to notify on activation)")]
+    [Header("Wind Zone")]
     public WindZone windZone;
 
     [Header("Player")]
@@ -39,54 +38,104 @@ public class WindBlowMachine : MonoBehaviour
 
     void Start()
     {
-        if (machinePanel != null) machinePanel.SetActive(false);
-        if (activatedVFX != null) activatedVFX.SetActive(false);
+        // Hide panel at start
+        if (machinePanel != null)
+            machinePanel.SetActive(false);
 
-        // Tell the slot who its owner is (same pattern as WorkbenchSlot → WorkbenchUI)
-        if (itemSlot != null) itemSlot.windMachine = this;
+        // Hide VFX at start
+        if (activatedVFX != null)
+            activatedVFX.SetActive(false);
 
-        Inventory.Instance.onInventoryChangedCallback += RefreshItemGrid;
+        // Assign owner to slot
+        if (itemSlot != null)
+            itemSlot.windMachine = this;
+
+        // Refresh inventory when inventory changes
+        if (Inventory.Instance != null)
+            Inventory.Instance.onInventoryChangedCallback += RefreshItemGrid;
     }
 
-    // ── Panel ──────────────────────────────────────────────────────────────
+    // ─────────────────────────────────────────────
+    // OPEN PANEL
+    // ─────────────────────────────────────────────
 
     public void OpenPanel()
     {
-        if (isActivated) return;
-        machinePanel.SetActive(true);
+        // Already activated
+        if (isActivated)
+            return;
+
+        if (machinePanel != null)
+            machinePanel.SetActive(true);
+
         RefreshItemGrid();
+
+        // Pause game
         Time.timeScale = 0f;
-        if (playerMovementScript != null) playerMovementScript.enabled = false;
+
+        // Disable player movement
+        if (playerMovementScript != null)
+            playerMovementScript.enabled = false;
+
+        // Notify UI manager
         UIManager.Instance?.OnPanelOpened(machinePanel);
     }
 
+    // ─────────────────────────────────────────────
+    // CLOSE PANEL
+    // ─────────────────────────────────────────────
+
     public void ClosePanel()
     {
-        if (machinePanel != null) machinePanel.SetActive(false);
-        // Return any uninserted item sitting in the slot back to inventory display
-        if (itemSlot != null) itemSlot.ClearSlot();
+        if (machinePanel != null)
+            machinePanel.SetActive(false);
+
+        // Clear inserted item
+        if (itemSlot != null)
+            itemSlot.ClearSlot();
+
+        // Resume game
         Time.timeScale = 1f;
-        if (playerMovementScript != null) playerMovementScript.enabled = true;
+
+        // Enable movement
+        if (playerMovementScript != null)
+            playerMovementScript.enabled = true;
+
         UIManager.Instance?.OnAllPanelsClosed();
     }
 
-    // ── Grid (mirrors WorkbenchUI.RefreshItemGrid exactly) ────────────────
+    // ─────────────────────────────────────────────
+    // REFRESH INVENTORY GRID
+    // ─────────────────────────────────────────────
 
     public void RefreshItemGrid()
     {
-        if (itemGridContent == null || itemSlotPrefab == null) return;
+        if (itemGridContent == null || itemSlotPrefab == null)
+            return;
 
-        foreach (var s in spawnedSlots) Destroy(s);
+        // Clear old slots
+        foreach (GameObject obj in spawnedSlots)
+        {
+            Destroy(obj);
+        }
+
         spawnedSlots.Clear();
 
+        // Spawn new inventory slots
         foreach (Item item in Inventory.Instance.items)
         {
-            if (item == null) continue;
+            if (item == null)
+                continue;
 
-            GameObject slotObj = Instantiate(itemSlotPrefab, itemGridContent);
+            GameObject slotObj =
+                Instantiate(itemSlotPrefab, itemGridContent);
+
             spawnedSlots.Add(slotObj);
 
-            Image[] images = slotObj.GetComponentsInChildren<Image>(true);
+            // Set icon
+            Image[] images =
+                slotObj.GetComponentsInChildren<Image>(true);
+
             if (images.Length >= 2)
             {
                 images[1].sprite = item.icon;
@@ -99,24 +148,31 @@ public class WindBlowMachine : MonoBehaviour
                 images[0].color = Color.white;
             }
 
-            DraggableItem drag = slotObj.GetComponent<DraggableItem>();
-            if (drag != null) drag.item = item;
+            // Assign draggable item
+            DraggableItem drag =
+                slotObj.GetComponent<DraggableItem>();
+
+            if (drag != null)
+                drag.item = item;
         }
     }
 
-    // ── Called by WindMachineSlot when an item is dropped onto it ─────────
+    // ─────────────────────────────────────────────
+    // SLOT CHANGED
+    // ─────────────────────────────────────────────
 
     public void OnSlotChanged()
     {
-        // Visual feedback: show what's in the slot
-        // The slot handles its own icon display (like WorkbenchSlot does)
-        // Nothing extra needed here unless you want a "confirm" preview
+        // Optional visual feedback
     }
 
-    // ── Insert button on panel calls this ─────────────────────────────────
+    // ─────────────────────────────────────────────
+    // INSERT ITEM
+    // ─────────────────────────────────────────────
 
     public void InsertItem()
     {
+        // No item inserted
         if (itemSlot == null || itemSlot.heldItem == null)
         {
             Debug.Log("No item placed in slot.");
@@ -124,44 +180,81 @@ public class WindBlowMachine : MonoBehaviour
             return;
         }
 
+        // Wrong item
         if (itemSlot.heldItem != requiredItem)
         {
-            Debug.Log("Wrong item! Need: " + requiredItem?.itemName + " | Got: " + itemSlot.heldItem.itemName);
+            Debug.Log(
+                "Wrong item! Need: " +
+                requiredItem?.itemName +
+                " | Got: " +
+                itemSlot.heldItem.itemName
+            );
+
             StartCoroutine(FlashSlotRed());
             return;
         }
 
-        // Consume item from inventory
+        // Remove item from inventory
         Inventory.Instance.RemoveItem(itemSlot.heldItem);
 
-        // Activate
+        // Activate machine
         isActivated = true;
 
+        // Play machine animation
         if (machineAnimator != null)
             machineAnimator.SetTrigger("Activate");
 
+        // Enable VFX
         if (activatedVFX != null)
             activatedVFX.SetActive(true);
 
-        Debug.Log("Wind machine activated with: " + itemSlot.heldItem.itemName);
+        Debug.Log(
+            "Wind machine activated with: " +
+            itemSlot.heldItem.itemName
+        );
 
-        // Notify wind zone in case player is already standing inside
-        windZone?.OnMachineActivated();
+        // Activate wind zone
+        if (windZone != null)
+            windZone.ActivateWind();
 
+        // Close panel
         ClosePanel();
     }
+
+    // ─────────────────────────────────────────────
+    // FLASH SLOT RED
+    // ─────────────────────────────────────────────
 
     IEnumerator FlashSlotRed()
     {
         if (itemSlot != null)
         {
-            Image slotImage = itemSlot.GetComponentInChildren<Image>();
+            Image slotImage =
+                itemSlot.GetComponentInChildren<Image>();
+
             if (slotImage != null)
             {
+                Color originalColor = slotImage.color;
+
                 slotImage.color = Color.red;
+
                 yield return new WaitForSecondsRealtime(0.5f);
-                slotImage.color = Color.white;
+
+                slotImage.color = originalColor;
             }
+        }
+    }
+
+    // ─────────────────────────────────────────────
+    // CLEANUP
+    // ─────────────────────────────────────────────
+
+    private void OnDestroy()
+    {
+        if (Inventory.Instance != null)
+        {
+            Inventory.Instance.onInventoryChangedCallback
+                -= RefreshItemGrid;
         }
     }
 }

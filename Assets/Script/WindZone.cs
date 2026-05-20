@@ -1,102 +1,132 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
-// Attach to a SEPARATE child GameObject that covers the wind area.
-// Its Collider2D must have Is Trigger = true.
 public class WindZone : MonoBehaviour
 {
     public WindBlowMachine machine;
 
     [Header("Wind Force")]
-    public float windForce = 15f;
+    public float windForce = 35f;
     public float windLiftForce = 8f;
+    public float boostInterval = 0.02f;
+    public float maxSpeed = 20f;
 
-    [Header("Gravity Compensation")]
-    [Tooltip("Match this to your player Rigidbody2D gravity scale (yours is 5).")]
-    public float playerGravityScale = 5f;
-    [Tooltip("1 = just barely floats. 2 = lifts upward comfortably.")]
-    public float liftMultiplier = 2f;
-
-    [Header("Speed Caps")]
-    public float maxHorizontalSpeed = 12f;
-    public float maxVerticalSpeed = 10f;
+    [Header("Wind Visual")]
+    public GameObject windVisual;
+    public Animator windAnimator;
 
     private Rigidbody2D playerRb;
     private bool playerInside = false;
-    private Coroutine windCoroutine = null;
+    private Coroutine windCoroutine;
+
+    void Start()
+    {
+        // Hide wind effect at start
+        if (windVisual != null)
+            windVisual.SetActive(false);
+    }
+
+    // ─────────────────────────────────────────────
+    // ACTIVATE WIND
+    // ─────────────────────────────────────────────
+
+    public void ActivateWind()
+    {
+        // Show wind visual
+        if (windVisual != null)
+            windVisual.SetActive(true);
+
+        // Play animation
+        if (windAnimator != null)
+            windAnimator.Play("WindZone");
+
+        Debug.Log("Wind zone activated");
+    }
+
+    // ─────────────────────────────────────────────
+    // DEACTIVATE WIND
+    // ─────────────────────────────────────────────
+
+    public void DeactivateWind()
+    {
+        if (windVisual != null)
+            windVisual.SetActive(false);
+
+        playerInside = false;
+
+        if (windCoroutine != null)
+            StopCoroutine(windCoroutine);
+    }
+
+    // ─────────────────────────────────────────────
+    // PLAYER ENTER
+    // ─────────────────────────────────────────────
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("Player")) return;
+        if (!other.CompareTag("Player"))
+            return;
+
+        if (machine == null)
+            return;
+
+        if (!machine.isActivated)
+            return;
 
         playerRb = other.GetComponent<Rigidbody2D>();
+
+        if (playerRb == null)
+            return;
+
         playerInside = true;
 
-        Debug.Log("[WindZone] Player entered. Machine activated: " + machine.isActivated);
-
-        if (machine.isActivated)
-            StartWindCoroutine();
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (!other.CompareTag("Player")) return;
-
-        Debug.Log("[WindZone] Player exited.");
-        playerInside = false;
-        playerRb = null;
-        StopWindCoroutine();
-    }
-
-    public void OnMachineActivated()
-    {
-        Debug.Log("[WindZone] OnMachineActivated. playerInside: " + playerInside);
-        if (playerInside && playerRb != null)
-            StartWindCoroutine();
-    }
-
-    private void StartWindCoroutine()
-    {
-        if (windCoroutine != null) return;
+        // Start wind
         windCoroutine = StartCoroutine(ApplyWind());
     }
 
-    private void StopWindCoroutine()
+    // ─────────────────────────────────────────────
+    // PLAYER EXIT
+    // ─────────────────────────────────────────────
+
+    private void OnTriggerExit2D(Collider2D other)
     {
+        if (!other.CompareTag("Player"))
+            return;
+
+        playerInside = false;
+        playerRb = null;
+
         if (windCoroutine != null)
-        {
             StopCoroutine(windCoroutine);
-            windCoroutine = null;
-        }
     }
+
+    // ─────────────────────────────────────────────
+    // APPLY WIND
+    // ─────────────────────────────────────────────
 
     IEnumerator ApplyWind()
     {
-        Debug.Log("[WindZone] ApplyWind coroutine started.");
-
         while (playerInside && machine.isActivated)
         {
             if (playerRb != null)
             {
-                // Calculate exactly how much force is needed to beat gravity at scale 5,
-                // then multiply so the player actually rises
-                float gravityCompensation = Physics2D.gravity.magnitude * playerGravityScale * playerRb.mass;
-                float totalLift = (gravityCompensation * liftMultiplier) + windLiftForce;
+                // Push player
+                playerRb.AddForce(
+                    new Vector2(windForce, windLiftForce),
+                    ForceMode2D.Impulse
+                );
 
-                playerRb.AddForce(new Vector2(windForce, totalLift), ForceMode2D.Force);
-
-                // Cap both axes
-                float clampedX = Mathf.Clamp(playerRb.linearVelocity.x, -maxHorizontalSpeed, maxHorizontalSpeed);
-                float clampedY = Mathf.Clamp(playerRb.linearVelocity.y, -maxVerticalSpeed, maxVerticalSpeed);
-                playerRb.linearVelocity = new Vector2(clampedX, clampedY);
+                // Clamp horizontal speed
+                if (playerRb.linearVelocity.x > maxSpeed)
+                {
+                    playerRb.linearVelocity = new Vector2(
+                        maxSpeed,
+                        playerRb.linearVelocity.y
+                    );
+                }
             }
 
-            // WaitForFixedUpdate syncs with physics engine � much more reliable
-            // than WaitForSeconds for fighting gravity
-            yield return new WaitForFixedUpdate();
+            yield return new WaitForSeconds(boostInterval);
         }
-
-        Debug.Log("[WindZone] ApplyWind ended.");
-        windCoroutine = null;
     }
 }

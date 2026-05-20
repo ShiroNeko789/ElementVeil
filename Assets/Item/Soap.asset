@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeName: Soap
   ingredients:
-  - item: {fileID: 11400000, guid: eb38f8d8ea6690e40aa3fea2a0911d3e, type: 2}
-    amount: 0
   - item: {fileID: 11400000, guid: f2e2876503a3db246ab845f169ada9c5, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 272f60fcc05782741bce5f13fd7d48b8, type: 2}
     amount: 0
   result: {fileID: 11400000, guid: 5a5e9f20a04203a4eaeb16f51cb59b34, type: 2}
   resultQuantity: 1
