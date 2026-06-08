@@ -1,0 +1,1081 @@
+fileFormatVersion: 2
+guid: eacdadd06ceecd145af731867e3b7e71
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3782733121269023678
+    second: smoke boss attack_0
+  - first:
+      213: -4869036907212650109
+    second: smoke boss attack_1
+  - first:
+      213: -4137323208578655716
+    second: smoke boss attack_2
+  - first:
+      213: -1193434189862965330
+    second: smoke boss attack_3
+  - first:
+      213: 399993674133800038
+    second: smoke boss attack_4
+  - first:
+      213: -6185349831898262462
+    second: smoke boss attack_5
+  - first:
+      213: 1586450945849596195
+    second: smoke boss attack_6
+  - first:
+      213: -5945608404191659772
+    second: smoke boss attack_7
+  - first:
+      213: 5451398695606723522
+    second: smoke boss attack_8
+  - first:
+      213: 7649973847161582062
+    second: smoke boss attack_9
+  - first:
+      213: 3636748458117941284
+    second: smoke boss attack_10
+  - first:
+      213: 7494565700326308076
+    second: smoke boss attack_11
+  - first:
+      213: 5354275809289712924
+    second: smoke boss attack_12
+  - first:
+      213: -3329833792928751999
+    second: smoke boss attack_13
+  - first:
+      213: -2222656499049356692
+    second: smoke boss attack_14
+  - first:
+      213: -7253464141508895977
+    second: smoke boss attack_15
+  - first:
+      213: 8029411715244129591
+    second: smoke boss attack_16
+  - first:
+      213: -2778656633711626693
+    second: smoke boss attack_17
+  - first:
+      213: 5348708755475017838
+    second: smoke boss attack_18
+  - first:
+      213: 3705451156066763792
+    second: smoke boss attack_19
+  - first:
+      213: -1995904352927738851
+    second: smoke boss attack_20
+  - first:
+      213: 3446668750246665162
+    second: smoke boss attack_21
+  - first:
+      213: -5924348993619726681
+    second: smoke boss attack_22
+  - first:
+      213: -4649783788869786790
+    second: smoke boss attack_23
+  - first:
+      213: -5627410425888845207
+    second: smoke boss attack_24
+  - first:
+      213: 8478371443412727976
+    second: smoke boss attack_25
+  - first:
+      213: -7236497047156649832
+    second: smoke boss attack_26
+  - first:
+      213: 7855166581939883888
+    second: smoke boss attack_27
+  - first:
+      213: 2857412550378154923
+    second: smoke boss attack_28
+  - first:
+      213: -3524922530326505557
+    second: smoke boss attack_29
+  - first:
+      213: -4921034605512698822
+    second: smoke boss attack_30
+  - first:
+      213: -3283010808585017076
+    second: smoke boss attack_31
+  - first:
+      213: -1143748573546849013
+    second: smoke boss attack_32
+  - first:
+      213: 7207349883432111008
+    second: smoke boss attack_33
+  - first:
+      213: 5525724988075500337
+    second: smoke boss attack_34
+  - first:
+      213: -4363254647020508856
+    second: smoke boss attack_35
+  - first:
+      213: -3571436525177924150
+    second: smoke boss attack_36
+  - first:
+      213: -3234983307531981901
+    second: smoke boss attack_37
+  - first:
+      213: 1001170144668791608
+    second: smoke boss attack_38
+  - first:
+      213: 9206750752195768357
+    second: smoke boss attack_39
+  - first:
+      213: -4859448234398065794
+    second: smoke boss attack_40
+  - first:
+      213: 5171671366906037456
+    second: smoke boss attack_41
+  - first:
+      213: -7813963548244860692
+    second: smoke boss attack_42
+  - first:
+      213: -2931111910944457717
+    second: smoke boss attack_43
+  - first:
+      213: 2157269768984338276
+    second: smoke boss attack_44
+  - first:
+      213: 1523910640176373786
+    second: smoke boss attack_45
+  - first:
+      213: 1319826945840971670
+    second: smoke boss attack_46
+  - first:
+      213: 4673672891583812441
+    second: smoke boss attack_47
+  - first:
+      213: 8405967335898730909
+    second: smoke boss attack_48
+  - first:
+      213: -4902014368702751562
+    second: smoke boss attack_49
+  - first:
+      213: -3271325004550382560
+    second: smoke boss attack_50
+  - first:
+      213: 3540094664907106225
+    second: smoke boss attack_51
+  - first:
+      213: 17872401000134096
+    second: smoke boss attack_52
+  - first:
+      213: 2870705885156007765
+    second: smoke boss attack_53
+  - first:
+      213: 1542666790083025826
+    second: smoke boss attack_54
+  - first:
+      213: -2012566158879503505
+    second: smoke boss attack_55
+  - first:
+      213: 6430764300575728489
+    second: smoke boss attack_56
+  - first:
+      213: -281998991640723959
+    second: smoke boss attack_57
+  - first:
+      213: 5482881553722062618
+    second: smoke boss attack_58
+  - first:
+      213: -6483497306077351703
+    second: smoke boss attack_59
+  - first:
+      213: 7030276874405680163
+    second: smoke boss attack_60
+  - first:
+      213: 7769403172951963428
+    second: smoke boss attack_61
+  - first:
+      213: -3349108558925171665
+    second: smoke boss attack_62
+  - first:
+      213: 2152829289242726815
+    second: smoke boss attack_63
+  - first:
+      213: 1546562362388140601
+    second: smoke boss attack_64
+  - first:
+      213: 8050909367016163340
+    second: smoke boss attack_65
+  - first:
+      213: 4443926626928647976
+    second: smoke boss attack_66
+  - first:
+      213: 8842066378867185314
+    second: smoke boss attack_67
+  - first:
+      213: -8643220265441344698
+    second: smoke boss attack_68
+  - first:
+      213: 6147857757512893261
+    second: smoke boss attack_69
+  - first:
+      213: 7787752146973978453
+    second: smoke boss attack_70
+  - first:
+      213: 201174686395509835
+    second: smoke boss attack_71
+  - first:
+      213: 7388926358974732615
+    second: smoke boss attack_72
+  - first:
+      213: -1219991157930752201
+    second: smoke boss attack_73
+  - first:
+      213: -7586524679248713164
+    second: smoke boss attack_74
+  - first:
+      213: 3407960171155655525
+    second: smoke boss attack_75
+  - first:
+      213: -2715296125710150430
+    second: smoke boss attack_76
+  - first:
+      213: 6801048842521736697
+    second: smoke boss attack_77
+  - first:
+      213: 7454126139094922986
+    second: smoke boss attack_78
+  - first:
+      213: 4286840508007479284
+    second: smoke boss attack_79
+  - first:
+      213: -7183257738695283948
+    second: smoke boss attack_80
+  - first:
+      213: 9009442880885025582
+    second: smoke boss attack_81
+  - first:
+      213: -3162271391538914205
+    second: smoke boss attack_82
+  - first:
+      213: 1970461313866748649
+    second: smoke boss attack_83
+  - first:
+      213: -2006004548401222946
+    second: smoke boss attack_84
+  - first:
+      213: -4750049028767775354
+    second: smoke boss attack_85
+  - first:
+      213: -4836195798192569988
+    second: smoke boss attack_86
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: smoke boss attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24cb7aa9448018bc0800000000000000
+      internalID: -3782733121269023678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 389c25beab4bd6cb0800000000000000
+      internalID: -4869036907212650109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1a90b756764596c0800000000000000
+      internalID: -4137323208578655716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaf696a6de1107fe0800000000000000
+      internalID: -1193434189862965330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 664062b90201d8500800000000000000
+      internalID: 399993674133800038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2449e2a6919392aa0800000000000000
+      internalID: -6185349831898262462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32992f8dab4340610800000000000000
+      internalID: 1586450945849596195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 409349658a4fc7da0800000000000000
+      internalID: -5945608404191659772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c3aaac1b3247ab40800000000000000
+      internalID: 5451398695606723522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee13815ceaa2a2a60800000000000000
+      internalID: 7649973847161582062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 428c19f4473587230800000000000000
+      internalID: 3636748458117941284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_11
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce8b6c9ebcb020860800000000000000
+      internalID: 7494565700326308076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c153e2afa753e4a40800000000000000
+      internalID: 5354275809289712924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18ed36bbecd0ac1d0800000000000000
+      internalID: -3329833792928751999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c622374b0b98721e0800000000000000
+      internalID: -2222656499049356692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71b14563bc4865b90800000000000000
+      internalID: -7253464141508895977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73d7c72d9633e6f60800000000000000
+      internalID: 8029411715244129591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_17
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b36f5da738a3079d0800000000000000
+      internalID: -2778656633711626693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e603c11464e6a3a40800000000000000
+      internalID: 5348708755475017838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0148be1b1386c6330800000000000000
+      internalID: 3705451156066763792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d141616d09f1d44e0800000000000000
+      internalID: -1995904352927738851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_21
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acb54e497f605df20800000000000000
+      internalID: 3446668750246665162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_22
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ae6ad59afb78cda0800000000000000
+      internalID: -5924348993619726681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_23
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a53eb069746a87fb0800000000000000
+      internalID: -4649783788869786790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962d09f680c67e1b0800000000000000
+      internalID: -5627410425888845207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a87e6e48e939a570800000000000000
+      internalID: 8478371443412727976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8909016b64cc29b90800000000000000
+      internalID: -7236497047156649832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07fcb084368230d60800000000000000
+      internalID: 7855166581939883888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bab680a439197a720800000000000000
+      internalID: 2857412550378154923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke boss attack_29
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba71e1f62a5f41fc0800000000000000
+      internalID: -3524922530326505557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1bce919b0a677ca4b97ed72fb3795691
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      smoke boss attack_0: -3782733121269023678
+      smoke boss attack_1: -4869036907212650109
+      smoke boss attack_10: 3636748458117941284
+      smoke boss attack_11: 7494565700326308076
+      smoke boss attack_12: 5354275809289712924
+      smoke boss attack_13: -3329833792928751999
+      smoke boss attack_14: -2222656499049356692
+      smoke boss attack_15: -7253464141508895977
+      smoke boss attack_16: 8029411715244129591
+      smoke boss attack_17: -2778656633711626693
+      smoke boss attack_18: 5348708755475017838
+      smoke boss attack_19: 3705451156066763792
+      smoke boss attack_2: -4137323208578655716
+      smoke boss attack_20: -1995904352927738851
+      smoke boss attack_21: 3446668750246665162
+      smoke boss attack_22: -5924348993619726681
+      smoke boss attack_23: -4649783788869786790
+      smoke boss attack_24: -5627410425888845207
+      smoke boss attack_25: 8478371443412727976
+      smoke boss attack_26: -7236497047156649832
+      smoke boss attack_27: 7855166581939883888
+      smoke boss attack_28: 2857412550378154923
+      smoke boss attack_29: -3524922530326505557
+      smoke boss attack_3: -1193434189862965330
+      smoke boss attack_4: 399993674133800038
+      smoke boss attack_5: -6185349831898262462
+      smoke boss attack_6: 1586450945849596195
+      smoke boss attack_7: -5945608404191659772
+      smoke boss attack_8: 5451398695606723522
+      smoke boss attack_9: 7649973847161582062
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

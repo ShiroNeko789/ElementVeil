@@ -6,9 +6,8 @@ public class Bullet : MonoBehaviour
     public float lifeTime = 2f;
     public int damage = 1;
     public float rustPower = 20f;
-
     private Vector2 direction;
-    private bool hasHit = false; // prevent double-triggers
+    private bool hasHit = false;
 
     public void SetDirection(Vector2 dir, float playerScaleX)
     {
@@ -25,7 +24,7 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        if (hasHit) return; // stop moving after hit
+        if (hasHit) return;
         transform.Translate(direction * speed * Time.deltaTime, Space.World);
     }
 
@@ -49,6 +48,15 @@ public class Bullet : MonoBehaviour
             return;
         }
 
+        // Hit SmokeBoss — only damages when vulnerable
+        SmokeBoss smokeBoss = collision.GetComponentInParent<SmokeBoss>();
+        if (smokeBoss != null)
+        {
+            smokeBoss.TakeDamage(damage);
+            PlayExplode();
+            return;
+        }
+
         RustableItem rustItem = collision.GetComponent<RustableItem>();
         if (rustItem != null)
         {
@@ -62,20 +70,18 @@ public class Bullet : MonoBehaviour
             PlayExplode();
         }
     }
+
     void PlayExplode()
     {
         hasHit = true;
-
         Collider2D col = GetComponent<Collider2D>();
         if (col != null) col.enabled = false;
 
         Animator anim = GetComponent<Animator>();
         if (anim != null)
         {
-            anim.SetTrigger("Explode"); // triggers the transition properly
+            anim.SetTrigger("Explode");
             float clipLength = 0.3f;
-
-            // Get BulletExplode clip length
             foreach (AnimationClip clip in anim.runtimeAnimatorController.animationClips)
             {
                 if (clip.name == "BulletExplode")

@@ -817,7 +817,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 697, y: 355}
+  m_AnchoredPosition: {x: 847, y: 359}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &63266702
@@ -1069,7 +1069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca35971e284ff64e8e0c9877539d34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clearRadius: 5
+  clearRadius: 10
   totalRubbishPieces: 4
   rubbishPieces:
   - {fileID: 858437727}
@@ -2497,8 +2497,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6432f81ec99ba14abf9a0150fe45e64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: Scene 1
-  spawnPointID: Entry_1
+  targetScene: RBrokenVillage
+  spawnPointID: Entrance 1
 --- !u!4 &193370025
 Transform:
   m_ObjectHideFlags: 0
@@ -4226,7 +4226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca35971e284ff64e8e0c9877539d34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clearRadius: 5
+  clearRadius: 10
   totalRubbishPieces: 4
   rubbishPieces:
   - {fileID: 547581173}
@@ -7465,6 +7465,135 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e076589518d99645baf259967f09023, type: 3}
+--- !u!1 &585899735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 585899737}
+  - component: {fileID: 585899736}
+  m_Layer: 0
+  m_Name: Stage 2 BGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &585899736
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585899735}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d09015d826f39e246b017394eb608dea, type: 3}
+  m_Resource: {fileID: 8300000, guid: d09015d826f39e246b017394eb608dea, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 50.17796
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &585899737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585899735}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 24.7, y: -19.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &593431905
 GameObject:
   m_ObjectHideFlags: 0
@@ -7923,7 +8052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca35971e284ff64e8e0c9877539d34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clearRadius: 5
+  clearRadius: 10
   totalRubbishPieces: 4
   rubbishPieces:
   - {fileID: 944931349}
@@ -8357,7 +8486,7 @@ GameObject:
   - component: {fileID: 619711597}
   - component: {fileID: 619711596}
   - component: {fileID: 619711595}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Higher Ground_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10081,11 +10210,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293219706496147670, guid: 0293cc11ff53dea46a86785e746e03c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32
+      value: -34.1
       objectReference: {fileID: 0}
     - target: {fileID: 7293219706496147670, guid: 0293cc11ff53dea46a86785e746e03c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 7293219706496147670, guid: 0293cc11ff53dea46a86785e746e03c3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12389,7 +12518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca35971e284ff64e8e0c9877539d34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clearRadius: 5
+  clearRadius: 10
   totalRubbishPieces: 4
   rubbishPieces:
   - {fileID: 2097761540}
@@ -12786,7 +12915,7 @@ GameObject:
   - component: {fileID: 974266442}
   - component: {fileID: 974266441}
   - component: {fileID: 974266440}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stage2Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13738,7 +13867,7 @@ GameObject:
   - component: {fileID: 1030487590}
   - component: {fileID: 1030487592}
   - component: {fileID: 1030487593}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Oil platform puzzle_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16724,7 +16853,7 @@ GameObject:
   - component: {fileID: 1256455391}
   - component: {fileID: 1256455390}
   - component: {fileID: 1256455389}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Higher Ground_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20357,7 +20486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca35971e284ff64e8e0c9877539d34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clearRadius: 5
+  clearRadius: 10
   totalRubbishPieces: 4
   rubbishPieces:
   - {fileID: 2051150153}
@@ -25298,7 +25427,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 550, y: 363}
+  m_AnchoredPosition: {x: 582, y: 354}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1855904001
@@ -26932,7 +27061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca35971e284ff64e8e0c9877539d34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clearRadius: 5
+  clearRadius: 10
   totalRubbishPieces: 4
   rubbishPieces:
   - {fileID: 240350373}
@@ -28272,3 +28401,4 @@ SceneRoots:
   - {fileID: 1680662494}
   - {fileID: 1279258814}
   - {fileID: 193370025}
+  - {fileID: 585899737}
